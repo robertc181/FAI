@@ -1,108 +1,337 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# FAI Football Academy Ireland
 
-Welcome USER_NAME,
+# Contents
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+1. Summary
+2. UX
+    * Strategy
+    * Scope
+    * Structure
+    * Skeleton
+    * Surface
+3. Features
+    * Existing Features
+    * Features left to implement
+4. Bugs
+5. Technologies used
+6. Testing
+7. Deployment
+   * Github Pages
+   * heroku
+8. Credits
+   * Content
+   * Acknowledgements
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+# Summary
 
-## Gitpod Reminders
+FAI is an online ecommerce shop that allows users to purchase football gear and accesories and sign up for a yearly payed subscription to the academy where the user will have access to all the training sessions and opt in to going to training and see other academy players profiles.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# UX
 
-`python3 -m http.server`
+## App Goals
 
-A blue button should appear to click: _Make Public_,
+## Strategy
 
-Another blue button should appear to click: _Open Browser_.
+### New site user's goals:
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+1. As a new visitor to the website I want to navigate the site with ease and no confusion.
 
-A blue button should appear to click: _Make Public_,
+2. As a new site user, I want to be able to browse and search for products
 
-Another blue button should appear to click: _Open Browser_.
+3. As a new site user, I want to be able to view the details of individual products
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+4. As a new site user, I want to be able to understand the intent of the page
 
-To log into the Heroku toolbelt CLI:
+5. As a new site user, I want to understand easily how to navigate the page and access the facilities provided
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+6. As a new site user, I want to be able to make a purchase without needing to create a profile
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+7. As a new site user, I want to be able to easily create a profile
 
-------
+8. As a new site user, I want to be able to easily create an academy profile
 
-## Release History
+9. As a new site user, I want to be able to easily create an academy yearly subscription
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+10. As a new site user, I want to be able to view my profile and my details about training , subscriptions and information.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+11. As a new site user, I want to be able to view training sessions and have the option to go or not.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+12. As a new site user, I want to be able to sort products on a page
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+13. As a new site user, I want to be able to sort by specific categories
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+14. As a new site user, I want to be able to amend the items in my bag including quantities and removing them entirely
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+ 
+### player site user's goals:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+1. As a returning site user, I want to be able to log in and out.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+2. As a returning site user, I want to be able to recover a forgotten password.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+3. As a returning site user, I want to be able to have a personalised profile.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+4. As a returning site user, I want to be able to view my past orders.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+5. As a returning site user, I want to be able to view my training.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Admin user's goals
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+1. As a site owner, I want to be able to create, edit and delete products.
+2. As a site owner, I want to be able to create training sessions and see who is attending.
+3. As a site owner, I want to be able to create delete and edit training sessions.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Scope
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Functional requirements:
 
-------
+#### For ease of use:
 
-## FAQ about the uptime script
+* Navigation bar which is simple and easy to navigate
+* Search bar
+* Button for academy profile
 
-**Why have you added this script?**
+### To ensure the database is up to date and editable:
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+* Function to add a product
+* Function to edit a product
+* Function to delete a product
+* For the products to be only editable by a superuser
+* Function to add a training session
+* Function to edit a training session
+* Function to delete a training session
+* For the training session to be only editable by a superuser
 
-**How will this affect me?**
+### Content requirements:
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### To ensure the site is visually appealing and to draw the user's eye:
+* clear colours 
+* images of products
+* Clear and constructive colours used for the page to be easy for the user to instinctively navigate.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Foe usability 
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+* For links to be clear and for the page to be constructed in a way which is instructive enabling the user to instinctively navigate the page
 
-**So….?**
+## Structure
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Interaction design:
 
-**Can I opt out?**
+* User friendly interface to ensure usability and to encourage the user to return
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+* Responsive and visible buttons which change on hover to provide user feedback as they navigate the site
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Information Architecture:
 
-**Anything more?**
+* Navigation bar at the top of the page
+* Responsive navigation bar - adjusting for mobile for ease of use
+* Responsive forms to ensure they fit within the designated spaces, no matter what device is being used or the size of the screen
+* Mainly all features appropriate size and responsive for mobile and desktop viewing
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
+## Skeleton
 
-Happy coding!
+### wireframe
+
+* - [Wireframes]()
+
+## Surface
+
+### The intention of the website is to be clean, crisp and clear
+
+* 
+
+# Plan
+
+## initial plan
+
+* 
+
+## Changes to plan
+
+* 
+
+# Features
+
+## Database model / app structure
+
+- [Database model]()
+
+## Existing Features
+
+| Feature        | Detailes           | 
+| ------------- |:-------------:| 
+| login     | | 
+| logout     | | 
+| create profile | | 
+| edit profile     | | 
+| create event     | | 
+| edit event     | | 
+| search player     | | 
+| open player profile account     |  | 
+| watch event     | |
+| event being watched     | | 
+
+
+## Features left to implement
+
+| Feature        | Detailes           | 
+| ------------- |:------------:| 
+| follow player     |  | 
+| see scouts     | | 
+| positions     | | 
+
+# Bugs
+
+| Feature        | Detailes     | 
+| ------------- |:-------------:| 
+
+
+
+# Technologies Used
+
+* HTML
+* CSS
+* Python
+* Git
+* github
+* Google Chrome
+* Heroku
+* Jinja
+* Bootstrap
+* JavaScript
+* Google fonts
+* Gitpod
+* Django
+* Favicon
+* Json
+
+
+# View
+
+* It is reccomended to view this application at a resolution ??
+
+## Testing
+
+
+### New site user's testing:
+
+1. As a new visitor to the website I want to navigate the site with ease and no confusion.
+
+2. As a new site user, I want to be able to browse and search for products
+
+3. As a new site user, I want to be able to view the details of individual products
+
+4. As a new site user, I want to be able to understand the intent of the page
+
+5. As a new site user, I want to understand easily how to navigate the page and access the facilities provided
+
+6. As a new site user, I want to be able to make a purchase without needing to create a profile
+
+7. As a new site user, I want to be able to easily create a profile
+
+8. As a new site user, I want to be able to easily create an academy profile
+
+9. As a new site user, I want to be able to easily create an academy yearly subscription
+
+10. As a new site user, I want to be able to view my profile and my details about training , subscriptions and information.
+
+11. As a new site user, I want to be able to view training sessions and have the option to go or not.
+
+12. As a new site user, I want to be able to sort products on a page
+
+13. As a new site user, I want to be able to sort by specific categories
+
+14. As a new site user, I want to be able to amend the items in my bag including quantities and removing them entirely
+
+
+### player/user site user's testing:
+
+1. As a returning site user, I want to be able to log in and out.
+
+2. As a returning site user, I want to be able to recover a forgotten password.
+
+3. As a returning site user, I want to be able to have a personalised profile.
+
+4. As a returning site user, I want to be able to view my past orders.
+
+5. As a returning site user, I want to be able to view my training.
+
+### admin testing:
+
+1. As a site owner, I want to be able to create, edit and delete products.
+
+2. As a site owner, I want to be able to create training sessions and see who is attending.
+
+3. As a site owner, I want to be able to create delete and edit training sessions.
+
+## Performance testing:
+
+* 
+
+# Git hub pages
+
+1. Create a new repository or access an existing repository
+2. Click the green Gitpod button to launch the project in Gitpod
+3. Create an index.html file
+4. Add the file to the staging area using the git add Functional
+5. Commit the file using the git commit function, adding an appropriate commentary
+6. Push the file to GitHub using the git commit and git push functions
+7. Refresh your GitHub repository and click the 'Settings' tab
+8. Scroll to the GitHub Pages section and select a publishing source
+9. Click 'Save'
+10. Click the URL created within the Settings - GitHub Pages section
+
+### To clone the repository for local deployment:
+
+1. On the main page of the repository, click the down arrow Code button
+2. Click the download icon under the relevant section to clone with either HTTPS, SSH or 3GitHub CLI
+4. In Git Bash, change the current directory to the location you want the directory to be stored
+5. Type git clone and then paste the URL you copied in step 2
+6. An example for HTTPS: git clone ******************************************** 
+7. Press enter - that's it, your clone has been completed!
+
+### Fork repo
+
+1. Navigate to the main page of the repository you wish to fork
+2. Click the Fork button on the top right hand side of the page
+
+# Deployment
+
+
+## Heroku
+
+To deploy the app to Heroku from its GitHub repository, the following steps were taken:
+
+1. From the GitPod terminal, create requirements.txt and Procfile using these commands:
+
+     ```pip3 freeze --local > requirements.txt
+     echo web: python app.py > Procfile
+     ```
+
+2. Push these files to GitHub
+3. Log In to Heroku
+4. 4.Select Create new app from the dropdown in the Heroku dashboard
+5. Choose a unique name ('player_link') for the app and the location nearest to you
+6. Go to the Deploy tab and under Deployment method choose GitHub
+7. In Connect to GitHub enter your GitHub repository details and once found, click Connect
+8. Go to the Settings tab and under Config Vars choose Reveal Config Vars
+9. Enter the following keys and values, which must match those in the env.py file created earlier:
+
+| Key        | Value           | 
+| ------------- |:-------------:| 
+| IP   | 0.0.0.0 | 
+| PORT     | 5000 | 
+| SECRET_KEY     | app secret key  | 
+| MONGO_URI     | mongodb+srv://root:dsxigyzwsao0sozm@myfirstcluster.n0en1.mongodb.net/player_link?retryWrites=true&w=majority | 
+| MONGO_DBNAME     | player_link | 
+
+10. Go back to the Deploy tab and under Automatic deploys choose Enable Automatic Deploys
+11. Under Manual deploy, select master and click Deploy Branch
+12. Once the app has finished building, click Open app from the header row of the dashboard
+
+## Credits
+
+### Acknowledgements
+
+* My mentor Antonio Rodriguez who has been great help with guidance and support throughout the project
