@@ -105,16 +105,16 @@ WSGI_APPLICATION = 'football_academy_ireland.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
-    'default': dj_database_url.parse('postgres://wjtgzjifmtacsj:a24c36a8e78340072c9198b26e1037fcad7533b7146694e9ffc71bed8cb3dec7@ec2-52-210-120-210.eu-west-1.compute.amazonaws.com:5432/d8l5qddjitr662')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+# DATABASES = {
+#     'default': dj_database_url.parse('postgres://wjtgzjifmtacsj:a24c36a8e78340072c9198b26e1037fcad7533b7146694e9ffc71bed8cb3dec7@ec2-52-210-120-210.eu-west-1.compute.amazonaws.com:5432/d8l5qddjitr662')
+# }
 
 
 # Password validation
