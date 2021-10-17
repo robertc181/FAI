@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'home',
     'products',
     'bag',
+    'join_academy',
 ]
 
 MIDDLEWARE = [
