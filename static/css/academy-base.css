@@ -5,3 +5,21 @@ html {
 p {
     color: red;
 }
+
+.button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    vertical-align: middle;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+
+.right{
+    position: absolute;
+    right: 5px;
+}

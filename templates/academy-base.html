@@ -2,80 +2,143 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
 
-    {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% endblock %}
+<head>
 
-    {% block extra_meta %}
-    {% endblock %}
+  {% block meta %}
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% endblock %}
 
-    {% block corecss %}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="{% static 'css/academy-base.css' %}">
-    {% endblock %}
+  {% block extra_meta %}
+  {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
+  {% block corecss %}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/academy-base.css' %}">
+  {% endblock %}
 
-    {% block corejs %}
-    <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    {% endblock %}
+  {% block extra_css %}
+  {% endblock %}
 
-    {% block extra_js %}
-    {% endblock %}
+  {% block corejs %}
+  <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+  crossorigin="anonymous"></script>
+  {% endblock %}
 
-    <title>FAI {% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
-    <header class="container-fluid fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                  </li>
-                </ul>
+  {% block extra_js %}
+  {% endblock %}
+
+  <title>FAI {% block extra_title %}{% endblock %}</title>
+</head>
+
+<body>
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Training</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <button class="button" >Buy membership</button>
+            </li>
+            {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+            <a href="" class="dropdown-item">Training Management</a>
+            {% endif %}
+            <a href="" class="dropdown-item">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item">Llogout</a>
+            {% else %}
+            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav> -->
+
+  <nav id="nav" class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container-fluid ">
+      <a class="navbar-brand p-light p-dark " href="#">FAI</a>
+      <button class="button">
+        Buy Membership
+      </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=" menu p-light p-dark "><i class="fas fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="p-lighter p-darker nav-link" href="{% url 'home' %}">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="p-lighter p-darker nav-link" href="">Training</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="p-lighter p-darker nav-link " href="#" id="user-options" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <div class="text-center">
+                <div><i class="fas fa-user fa-lg"></i></div>
+                <p class="my-0">My Account</p>
               </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+              {% if request.user.is_authenticated %}
+              {% if request.user.is_superuser %}
+              <a href="" class="dropdown-item">Product / Training Management</a>
+              {% endif %}
+              <a href="" class="dropdown-item">My Profile</a>
+              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+              {% else %}
+              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              {% endif %}
             </div>
-          </nav>
-    </header>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    {% if messages %}
-        <div class="message-container"></div>
-    {% endif %}
+  {% if messages %}
+  <div class="message-container"></div>
+  {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+  {% block page_header %}
+  {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+  {% block content %}
+  {% endblock %}
 
-    {% block postloadjs %}
-    {% endblock %}
+  {% block postloadjs %}
+  {% endblock %}
 
-    
-  </body>
+
+</body>
+
 </html>
-
-
