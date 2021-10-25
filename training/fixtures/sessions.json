@@ -1,0 +1,24 @@
+[{
+        "pk": "1",
+        "model": "training.session",
+        "fields": {
+            "day": "thursday",
+            "name": "Strength and conditioning session",
+            "description": "In the gym , bring your foam rollers",
+            "time": 18.00,
+            "attendees": ["david", "sam", "cononr", "rob", "harry"]
+        }
+    },
+
+    {
+        "pk": "2",
+        "model": "training.session",
+        "fields": {
+            "day": "saturday",
+            "name": "saturday session U20s",
+            "description": "Today we will be working with the goalkeepers to recreate many set piece situations, bring out nets",
+            "time": 13.00,
+            "attendees": ["james", "sam", "cononr"]
+        }
+    }
+]
