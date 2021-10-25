@@ -19,10 +19,17 @@
         <div class="opaque-overlay">&nbsp;</div>
 
         <section class="callout jumbotron text-center">
+            {% if request.user.is_authenticated %}
+            <h1 class="p-light p-dark jumbotron-header">Welcome to FAI Academy
+            </h1>
+            <p class=" p-lighter p-darker lead">Click below to view all training session.</p>
+            <button class="button" href="{% url 'training' %}" >View</button>
+            {% else %}
             <h1 class="p-light p-dark jumbotron-header">FAI Academy
             </h1>
             <p class=" p-lighter p-darker lead">Click below to join.</p>
-            <button class="button" onclick="contact()">Join</button>
+            <button class="button" href="{% url 'account_signup' %}">Join</button>
+            {% endif %}
         </section>
     </div>
 

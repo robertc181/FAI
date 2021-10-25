@@ -39,13 +39,11 @@
         <div class="row align-items-center ">
             {% for session in sessions %}
             <div class="col">
-                <div class="box">
+               <div class="box">
                     <p>{{ session.day }}</p>
                     <p>{{ session.name }}</p>
-                    <p>{{ session.description }}</p>
                     <p>{{ session.time }}</p>
-                    <p>{{ session.attendees }}</p>
-                    <button class="button">View</button>
+                    <a href="{% url 'session_detail' session.id %}">View</a>
                 </div>
             </div>
             {% if forloop.counter|divisibleby:1 %}
