@@ -101,8 +101,8 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/training'
-LOGOUT_REDIRECT_URL = '/training'
+LOGIN_REDIRECT_URL = '/join-academy'
+LOGOUT_REDIRECT_URL = '/join-academy'
 
 WSGI_APPLICATION = 'football_academy_ireland.wsgi.application'
 

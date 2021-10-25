@@ -20,5 +20,17 @@
             "time": 13.00,
             "attendees": ["james", "sam", "cononr"]
         }
+    },
+
+    {
+        "pk": "3",
+        "model": "training.session",
+        "fields": {
+            "day": "monday",
+            "name": "saturday session U20s",
+            "description": "Today we will be working with the goalkeepers to recreate many set piece situations, bring out nets",
+            "time": 13.00,
+            "attendees": ["james", "sam", "cononr"]
+        }
     }
 ]

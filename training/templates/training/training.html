@@ -19,7 +19,7 @@
         <div class="opaque-overlay">&nbsp;</div>
 
         <section class="callout jumbotron text-center">
-            <h1 class="p-light p-dark jumbotron-header">Training
+            <h1 class="p-light p-dark jumbotron-header">Training Sessions
             </h1>
         </section>
     </div>
@@ -28,4 +28,52 @@
 
 </div>
 
+<div class="row">
+    <div class="col text-center mt-3">
+        <h2 class="logo-font">Training</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="training-container col-10 offset-1">
+        <div class="row align-items-center ">
+            {% for session in sessions %}
+            <div class="col">
+                <div class="box">
+                    <p>{{ session.day }}</p>
+                    <p>{{ session.name }}</p>
+                    <p>{{ session.description }}</p>
+                    <p>{{ session.time }}</p>
+                    <p>{{ session.attendees }}</p>
+                    <button class="button">View</button>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:1 %}
+            <div class="col-6 d-sm-none mb-5">
+                <hr>
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:2 %}
+            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                <hr>
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:3 %}
+            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                <hr>
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:4 %}
+            <div class="col-12 d-none d-xl-block mb-5">
+                <hr>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+    
 {% endblock %}
+
