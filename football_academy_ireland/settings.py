@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'bag',
     'join_academy',
     'training',
+    'myprofile',
 ]
 
 MIDDLEWARE = [

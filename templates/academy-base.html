@@ -117,7 +117,7 @@
               {% if request.user.is_superuser %}
               <a href="" class="dropdown-item">Product / Training Management</a>
               {% endif %}
-              <a href="" class="dropdown-item">My Profile</a>
+              <a href="{% url 'myprofile' %}" class="dropdown-item">My Profile</a>
               <a href="{% url 'account_logout'%}?next={% url 'join_academy' %}" class="dropdown-item">Logout</a>
               {% else %}
               <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>

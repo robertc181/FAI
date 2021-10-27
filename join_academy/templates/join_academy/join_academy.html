@@ -23,12 +23,12 @@
             <h1 class="p-light p-dark jumbotron-header">Welcome to FAI Academy
             </h1>
             <p class=" p-lighter p-darker lead">Click below to view all training session.</p>
-            <button class="button" href="{% url 'training' %}" >View</button>
+            <button><a href="{% url 'training' %}" class="button">View</a></button>
             {% else %}
             <h1 class="p-light p-dark jumbotron-header">FAI Academy
             </h1>
             <p class=" p-lighter p-darker lead">Click below to join.</p>
-            <button class="button" href="{% url 'account_signup' %}">Join</button>
+            <button><a href="{% url 'account_signup' %}" class="button">Join</a></button>
             {% endif %}
         </section>
     </div>
@@ -36,5 +36,17 @@
     <!-- /.callout -->
 
 </div>
+
+{% endblock %}
+
+{% block postloadjs %}
+
+<script>
+
+function linkto() {
+    window.location.href("accounts/signup/")
+}
+
+</script>
 
 {% endblock %}
