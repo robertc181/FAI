@@ -1,0 +1,74 @@
+{% extends "academy-base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid callout-container">
+
+    <!-- callout -->
+
+    <div class="container-fluid callout-container">
+        <div class="opaque-overlay">&nbsp;</div>
+
+        <section class="callout jumbotron text-center">
+            <h1 class="p-light p-dark jumbotron-header"> Trials
+            </h1>
+        </section>
+    </div>
+
+    <!-- /.callout -->
+
+</div>
+
+
+<div class="row">
+    <div class="training-container col-10 offset-1">
+        <div class="row align-items-center ">
+            {% for trial in trials %}
+            <div class="col">
+                <div class="box">
+                    <p>{{ trial.date }}</p>
+                    <p>{{ trial.name }}</p>
+                    <p>{{ trial.time }}</p>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:1 %}
+            <div class="col-6 d-sm-none mb-5">
+                <hr>
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:2 %}
+            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                <hr>
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:3 %}
+            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                <hr>
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:4 %}
+            <div class="col-12 d-none d-xl-block mb-5">
+                <hr>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+{% endblock %}

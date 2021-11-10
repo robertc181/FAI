@@ -1,0 +1,25 @@
+[{
+    "pk": "1",
+    "model": "trials.trial",
+    "fields": {
+        "day": "08/12/2021",
+        "name": "Trial one",
+        "description": "In the gym , bring your foam rollers",
+        "time": 18.00,
+        "players": ["david", "sam", "cononr", "rob", "harry"]
+    }
+},
+
+{
+    "pk": "2",
+    "model": "trials.trial",
+    "fields": {
+        "day": "11/08/2022",
+        "name": "Trial two",
+        "description": "Today we will be working with the goalkeepers to recreate many set piece situations, bring out nets",
+        "time": 13.00,
+        "players": ["james", "sam", "cononr"]
+    }
+}
+
+]
