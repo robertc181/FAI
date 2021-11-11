@@ -26,3 +26,28 @@ def session_detail(request, session_id):
 
     return render(request, 'training/session_detail.html', context)
 
+def session_attend(request, session_id):
+    """ A view to return the session detail page and its contents """
+
+    session = get_object_or_404(Session, pk=session_id)
+    session.attendees.add(request.user)
+    session.save()
+    context = {
+        'session': session,
+    }
+
+    return render(request, 'training/session_detail.html', context)
+
+
+# def session_comment(request, session_id):
+#     """ A view to return the session detail page and its contents """
+
+#     session = get_object_or_404(Session, pk=session_id)
+#     session.attendees.add(request.user)
+#     session.save()
+#     context = {
+#         'session': session,
+#     }
+
+#     return render(request, 'training/session_detail.html', context)
+

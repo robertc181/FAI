@@ -23,6 +23,17 @@
             <h1 class="p-light p-dark jumbotron-header">{{ session.name }}
             </h1>
         </section>
+        <div class="mx-auto">
+            <a class="mx-auto" href="{% url 'session_attend' session.id  %}">Attend</a>
+        </div>
+
+        <p>Create a comment</p>
+        <input type="text" >
+
+        <div>
+            <h1>Comments</h1>
+
+        </div>
     </div>
 
     <!-- /.callout -->
