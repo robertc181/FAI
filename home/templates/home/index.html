@@ -10,18 +10,36 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
+    <!-- <div class="container h-100  topheadertext mx-auto">
         <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    The official FAI collection
+            <div class="col-12 my-auto mx-auto">
+                <h1 class="display-2 text-light">
+                    The official <br> FAI collection
                 </h1>
-                <div class="my-5">
+                <div class="">
                     <h4>
                         <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
                     </h4>
                 </div>
             </div>
         </div>
+    </div> -->
+
+    <div class="container-fluid callout-container mt-5 home">
+
+        <!-- callout -->
+
+        <div class="container-fluid callout-container">
+            
+            <section class="callout jumbotron text-center mx-auto bg-transparent text-light">
+                <h1 class="p-light p-dark jumbotron-header">Look your best on and off the pitch
+                </h1>
+                <button class=" button button1" onclick="contact()">View products</button>
+            </section>
+        </div>
+
+        <!-- /.callout -->
+
     </div>
+
 {% endblock %}

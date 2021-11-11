@@ -1,138 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Roboto+Condensed&display=swap');
+
+
+/* ---------------------------------------general */
+
 html {
     height: 100%;
+    font-family: Roboto;
 }
 
 body {
-    background: url('/media/download.png') no-repeat center center fixed;
+    background: url('/media/fachry-zella-devandra-Yta-zdP9PVM-unsplash.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
-    font-family: 'Lato';
+    height: calc(50vh - 164px);
+    color: rgb(34, 34, 34);
+    font-family: 'Roboto';
+    z-index: 2;
 }
 
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
+.med-nav{
+    margin-top: -50px;
 }
 
-.logo-font {
-    text-transform: uppercase;
+ul {
+    list-style-type: none;
 }
 
-.main-logo-link {
-    width: fit-content;
+.img-sm{
+    width: 3px;
 }
 
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
+.opaque-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
-.btn-black {
-    background: black;
-    color: white;
-}
 
-.btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
-}
+/* ---------------------------------------text styles */
 
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: black;
-    color: white !important;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
+.textsm{
     color: white;
 }
 
-.text-black {
-    color: #000 !important;
+/* ---------------------------------------topnav */
+
+nav{
+    z-index: 1;
 }
 
-.border-black {
-    border: 1px solid black !important;
+.topnav{
+    font-family: Ubuntu;
+    text-decoration: none;
+    z-index: 1;
 }
 
-.bg-black {
-    background: #000 !important;
+.borderbtm{
+    border-bottom: solid 1px white;
 }
 
-.overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
+.topnav a:link{ color:#ffffff; } 
+.topnav a:visited{ color:#ffffff; } 
+.topnav a:hover{ 
+    color:#c2c2c2;
+    text-decoration: none;
+
+} 
+.topnav a:active{ color:#ffffff}
+
+.topnav .nav-item{
+    padding-right: 20px;
 }
 
-a.category-badge > span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
+.right { 
+    float:right; 
+    clear:right;
 }
 
-.btt-button {
-    height: 42px;
-    width: 42px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
+.hearder-nav-text{
+    font-size: 15px;
+    letter-spacing: 2px;
 }
 
-.btt-link,
-.update-link,
-.remove-item {
+.nav-item-head{
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+.functionaltyul{
+    position: absolute;
+    right: 40px;
+    display: inline;
+}
+
+.functiondivnav li{
+    float:right;
+    display: inline;
+}
+
+.dropdown{
+    border-radius: none;
+    border: solid 2px white;
+    background-color: white; 
+}
+
+.dropdown-item { 
+    background-color: white;
+    color: black;
+    margin-top: 5px;
+    text-align: center;
+ } 
+
+.list-group-item{
+    border: none;
+    background-color: transparent;
+    padding: 0px 0px 0px 20px;
+}
+
+.bars{
+    font-size: 32px;
+   
+}
+.bag{
+    font-size: 30px;
+}
+
+.xbtn-sidenav{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 20px;
+    color: white;
+
+}
+
+
+
+/* ---------------------------------------buttons */
+
+.button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    vertical-align: middle;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition-duration: 0.4s;
     cursor: pointer;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: solid 2px white;
+    color: white;
+
 }
 
-/* -------------------------------- Media Queries */
+.button1 {
+    letter-spacing: 2px;
+    background-color: transparent;
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
+}
+
+.button1:hover {
+    background-color: white;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.spbutton{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    vertical-align: middle;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin:10px
+}
+
+
+
+
+
+/* ---------------------------------------home */
+
+.topheadertext{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+}
+
+.home{
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 2;
+}
+
+.container{
+    z-index: 2;
+}
+
+.jumbotron-header{
+    font-family: Orbitron;
+    font-size: 60px;
+}
+
+
+/* ---------------------------------------smallnavpopup */
+
+
+.sidenav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgb(29, 29, 29);
+    z-index: 5;
+
+}
+
+.sidenavtop{
+    margin-top: 50%;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 1px;
+    
+}
+
+.sidenavtop li{
+    padding-bottom: 15px;
+    
+}
+
+.sidenavtop a{
+    color: white ;
+}
+
+.hr{
+    color: red;
+}
+
+.sidenavbtm{
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+}
+
+.headsidenav{
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.searchsidenav{
+    position: absolute;
+    top: 9%;
+    left: 20px;
+}
+
+.serchbox{
+    background-color: transparent;
+    border-bottom: solid 2px white !important;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    color: white;
+
+}
+
+.searchbtn{
+    border: none;
+    background-color: transparent;
+    color: white;
+
+}
+
+.icon{
+    font-size: 19px;
+}
+
+/* ---------------------------------------general */
+/* ---------------------------------------general */
+/* ---------------------------------------general */
+
+/* ---------------------------------------general */
+/* ---------------------------------------general */
+/* ---------------------------------------general */
+/* ---------------------------------------general */
+/* ---------------------------------------general */
+/* ---------------------------------------general */
+
+/* ---------------------------------------@media x-small */
+
+@media (max-width: 576px) {
+
+    .right { 
+        width:0%; 
+    }
+
+   
+    .menusm{
+        display: block ;
+        position: absolute;
+        top: 60px;
+        right: 70px;
+        font-size: 25px;
+    }
+
+    .textsm{
+        display: none;
+    }
+
+
+    .itemsnav{
+        display: none;
+    }
+
+
+    .functiondivnav{
+        display: none;
+    }
+
+    .sidenav{
+        position: absolute;
+        left: 25%;
+    
+    }
   }
-}
 
-/* fixed top navbar only on medium and up */
+/* ---------------------------------------@media Small */
+
+@media (min-width: 576px) {
+    .textsm{
+        font-size: 10px;
+    }
+    .textsm{
+        display: none;
+    }
+
+    .sidenav{
+        position: absolute;
+        left: 60%;
+    
+
+    }
+
+   
+    .functiondivnav{
+        display: none;
+    }
+
+    .itemsnav{
+        display: none;
+    }
+
+    .menusm{
+        display: block ;
+        position: absolute;
+        top: 60px;
+        right: 70px;
+
+    }
+
+   
+  }
+
+/* ---------------------------------------@media Medium */
+
+@media (min-width: 768px) {
+    
+
+    .right { 
+        width:10%; 
+    }
+
+    .textsm{
+        display: none;
+    }
+    
+    
+
+    .functiondivnav{
+        display: none;
+    }
+
+    .sidenav{
+        position: absolute;
+        left: 60%;
+    
+
+    }
+
+    .itemsnav{
+        display: none;
+    }
+
+  }
+
+
+/* ---------------------------------------@media Large */
+
 @media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
+    .topnav{
+        width: 800px;
     }
 
-    .header-container {
-        padding-top: 164px;
+    .right { 
+        width:14%; 
     }
+
+    .nav-item-head{
+        font-size: 13px;
+    }
+
+    .menusm{
+        display: none ;
+    }
+
+    .textsm{
+        display: block;
+    }
+
+
+    .functiondivnav{
+        display: block;
+    }
+
+    .itemsnav{
+        display: block;
+    }
+
+    .sidenav{
+        display: none;
+    
+    }
+
+  }
+
+/* ---------------------------------------@media Extra large */
+
+@media (min-width: 1200px) {
+    .topnav{
+        width: 1000px;
+    }
+
+    .textsm{
+        font-size: 14px;
+    }
+
+    .right { 
+        width:29%; 
+    }
+
+
+    .nav-item-head{
+        font-size: 16px;
+    }
+  }
+
+/* ---------------------------------------@media Extra extra large */
+
+@media (min-width: 1400px) {
+    .topnav{
+        width: 1200px;
+    }
+    
+    .right { 
+        width: 35%;
+    }
+
+    .textsm{
+        font-size: 16px;
+    }
+  }
+
+/* ---------------------------------------@media Extra extra extra large */
+
+@media (min-width: 1800px) {
+    .topnav{
+        width: 1400px;
+    }
+
+    .right { 
+        width: 42%;
+    }
+
+    .textsm{
+        font-size: 17px;
+    }
+  }
+
+
+
+
+
+
+/* --------------------------------------- The search bar  */
+
+.formPopup{
+    position: absolute;
+    top: 0;
+    background-color: white;
+    height: 150px;
+    width: 100%;
+    z-index: 5;
+
 }
 
-/* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
-    }
+.xbtn{
+    position: absolute;
+    right: 50px;
+    top: 25px;
+    font-size: 25px;
 }
+
+.nav-item{
+    color: white;
+}
+
+.serchbox{
+    border-bottom: solid 2px black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 50%;
+}
+
+.loginPopup{
+    z-index: 4;
+}
+
