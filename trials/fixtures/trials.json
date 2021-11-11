@@ -6,7 +6,7 @@
         "name": "Trial one",
         "description": "In the gym , bring your foam rollers",
         "time": 18.00,
-        "players": ["david", "sam", "cononr", "rob", "harry"]
+        "selected_players": ["david", "sam", "cononr", "rob", "harry"]
     }
 },
 
@@ -18,7 +18,7 @@
         "name": "Trial two",
         "description": "Today we will be working with the goalkeepers to recreate many set piece situations, bring out nets",
         "time": 13.00,
-        "players": ["james", "sam", "cononr"]
+        "selected_players": ["james", "sam", "cononr"]
     }
 }
 

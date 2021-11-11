@@ -38,6 +38,17 @@
                     <p>{{ trial.date }}</p>
                     <p>{{ trial.name }}</p>
                     <p>{{ trial.time }}</p>
+
+                    <!-- If user has been selected show -->
+                    {% if trial.player_selected %}
+                    <a href="{% url 'trial_detail' trial.id %}" >See event</a>
+
+                    {% else %}
+                    <!-- If user has not been selected show -->
+                    <p>You have not been called for this trial</p>
+                    <p>Keep up with your training and you may be selected next time</p>
+
+                    {% endif %}
                 </div>
             </div>
             {% if forloop.counter|divisibleby:1 %}
