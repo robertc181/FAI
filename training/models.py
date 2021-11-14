@@ -17,10 +17,25 @@ class Session(models.Model):
         return self.name
 
 
-class Comments(models.Model):
-    comment = models.CharField(max_length=254)
-    training_session = models.ManyToManyField(Session)
-    user = models.ManyToManyField(User)
+# class Comment(models.Model):
+#     comment = models.CharField(max_length=254)
+#     training_session = models.ManyToManyField(Session)
+#     user = models.ManyToManyField(User)
     
+#     def __str__(self):
+#         return self.user
+
+
+class Comment(models.Model):
+    session = models.ForeignKey(Session,on_delete=models.CASCADE,related_name='comments')
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    active = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['created_on']
+
     def __str__(self):
-        return self.user
+        return 'Comment {} by {}'.format(self.body, self.name)

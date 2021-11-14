@@ -1,5 +1,8 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Session
+from .models import Session, Comment
+from .forms import CommentForm
+
+
 
 # Create your views here.
 
@@ -17,14 +20,28 @@ def training(request):
 
 def session_detail(request, session_id):
     """ A view to return the session detail page and its contents """
-
     session = get_object_or_404(Session, pk=session_id)
 
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            print('data is valid', request.POST)
+            # Create Comment object but don't save to database yet
+            new_comment = comment_form.save(commit=False)
+            # Assign the current post to the comment
+            new_comment.session = session
+            # Save the comment to the database
+            new_comment.save()
+    comment_form = CommentForm()
+    comments = Comment.objects.filter(session=session)
     context = {
         'session': session,
+        'comment_form': comment_form,
+        'comments': comments
     }
 
     return render(request, 'training/session_detail.html', context)
+
 
 def session_attend(request, session_id):
     """ A view to return the session detail page and its contents """
@@ -39,15 +56,39 @@ def session_attend(request, session_id):
     return render(request, 'training/session_detail.html', context)
 
 
-# def session_comment(request, session_id):
-#     """ A view to return the session detail page and its contents """
+def session_unattend(request, session_id):
+    """ A view to return the session detail page and its contents """
 
-#     session = get_object_or_404(Session, pk=session_id)
-#     session.attendees.add(request.user)
-#     session.save()
-#     context = {
-#         'session': session,
-#     }
+    session = get_object_or_404(Session, pk=session_id)
+    session.attendees.remove(request.user)
+    session.save()
+    context = {
+        'session': session,
+    }
 
-#     return render(request, 'training/session_detail.html', context)
+    return render(request, 'training/session_detail.html', context)
 
+
+def post_detail(request, slug):
+    template_name = 'training/session_detail.html'
+    session = get_object_or_404(Session, slug=slug)
+    comments = session.comments.filter(active=True)
+    new_comment = None
+    # Comment posted
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+
+            # Create Comment object but don't save to database yet
+            new_comment = comment_form.save(commit=False)
+            # Assign the current post to the comment
+            new_comment.session = session
+            # Save the comment to the database
+            new_comment.save()
+    else:
+        comment_form = CommentForm()
+
+    return render(request, template_name, {'session': session,
+                                           'comments': comments,
+                                           'new_comment': new_comment,
+                                           'comment_form': comment_form})
