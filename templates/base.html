@@ -77,10 +77,10 @@
                     <a class="nav-item-head" href="{% url 'products' %}?category=training_wear">TRAINING GEAR</a>
                 </li>
                 <li>
-                    <a class="nav-item-head" href="#">FOOTBALL BOOTS</a>
+                    <a class="nav-item-head" href="{% url 'products' %}?category=boots">FOOTBALL BOOTS</a>
                 </li>
                 <li>
-                    <a class="nav-item-head" href="#">SPECIALS</a>
+                    <a class="nav-item-head" href="{% url 'products' %}?category=essentials">ESSENTIALS</a>
                 </li>
             </ul>
         </div>
@@ -91,7 +91,7 @@
                     <a class="bars"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="list-group-item text-light">
-                    <a class="bag" href="#"><i class="fas fa-shopping-bag"></i></a>
+                    <a class="bag" href="{% url 'view_bag' %}"><i class="fas fa-shopping-bag"></i></a>
                 </li>
             </ul>
         </div>
@@ -107,7 +107,7 @@
     </nav>
 
     <!-- small nav popup -->
-    <div class="sidenav" id="popupnavsm">
+    <div class="sidenav" id="popupnavsm" style="display:none;">
         <div class="container">
             <div class="row">
                 <div class="searchsidenav">
@@ -131,13 +131,13 @@
                             <a class="" href="{% url 'products' %}">ALL PRODUCTS</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="" href="#">TRAINING GEAR</a>
+                            <a class="" href="{% url 'products' %}?category=training_wear">TRAINING GEAR</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="" href="#">FOOTBALL BOOTS</a>
+                            <a class="" href="{% url 'products' %}?category=boots">FOOTBALL BOOTS</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="" href="#">SPECIALS</a>
+                            <a class="" href="{% url 'products' %}?category=essentials">ESSENTIALS</a>
                         </li>
                     </ul>
                 </div>
@@ -149,7 +149,7 @@
                                 <a class="" href="#">Home</a>
                             </li>
                             <li class="list-group-item">
-                                <a class="" href="{% url 'products' %}?category=training_wear">All Products</a>
+                                <a class="" href="{% url 'products' %}">All Products</a>
                             </li>
                         </li>
                         <li class="list-group-item">
@@ -167,8 +167,8 @@
         </div>
     </div>
     <!-- credit  to ww3 schools for form popup https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_popup_form -->
-    <div class="loginPopup">
-        <div class="formPopup" id="popupForm">
+    <div class="loginPopup" sty>
+        <div class="formPopup bg-dark" id="popupForm" style=" display:none;">
             <div class="container">
                 <div class="row">
                     <div class=" searchbox pt-5">

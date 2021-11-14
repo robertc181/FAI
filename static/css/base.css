@@ -123,11 +123,11 @@ nav{
 }
 
 .bars{
-    font-size: 32px;
+    font-size: 20px;
    
 }
 .bag{
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .xbtn-sidenav{
@@ -135,7 +135,7 @@ nav{
     top: 20px;
     right: 30px;
     font-size: 20px;
-    color: white;
+    color: rgb(44, 44, 44);
 
 }
 
@@ -309,9 +309,9 @@ nav{
     .menusm{
         display: block ;
         position: absolute;
-        top: 60px;
+        top: 70px;
         right: 70px;
-        font-size: 25px;
+        font-size: 15px;
     }
 
     .textsm{
@@ -364,7 +364,7 @@ nav{
     .menusm{
         display: block ;
         position: absolute;
-        top: 60px;
+        top: 70px;
         right: 70px;
 
     }
@@ -442,6 +442,10 @@ nav{
     
     }
 
+    .nav-item-head{
+        letter-spacing: 1px;
+    }
+
   }
 
 /* ---------------------------------------@media Extra large */
@@ -478,6 +482,10 @@ nav{
 
     .textsm{
         font-size: 16px;
+    }
+
+    .nav-item-head{
+        letter-spacing: 2px;
     }
   }
 
