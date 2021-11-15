@@ -47,10 +47,13 @@ def session_attend(request, session_id):
     """ A view to return the session detail page and its contents """
 
     session = get_object_or_404(Session, pk=session_id)
+    comments = Comment.objects.filter(session=session)
     session.attendees.add(request.user)
     session.save()
+    session.attendees_list = session.attendees.all()
     context = {
         'session': session,
+        'comments': comments
     }
 
     return render(request, 'training/session_detail.html', context)

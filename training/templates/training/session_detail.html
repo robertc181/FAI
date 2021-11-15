@@ -24,8 +24,9 @@
             </h1>
         </section>
         <div class="mx-auto">
-            {% if request.user in session.attendees  %}
+            {% if request.user in session.attendees_list  %}
             <a class="mx-auto" href="{% url 'session_unattend' session.id  %}">Unattend</a>
+            
             {% else %}
             <a class="mx-auto" href="{% url 'session_attend' session.id  %}">Attend</a>
             {% endif %}

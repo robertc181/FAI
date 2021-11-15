@@ -81,26 +81,35 @@
       </div>
     </nav> -->
 
-  <nav id="nav" class="navbar navbar-expand-lg navbar-light sticky-top">
+  <nav id="nav" class="navbar navbar-expand-lg sticky-top academy-nav">
     <div class="container-fluid ">
-      <a class="navbar-brand p-light p-dark " href="{% url 'join_academy' %}">FAI</a>
+      <a class="navbar-brand" href="{% url 'join_academy' %}"><img src="/media/92be6962682d46918deb877977e7925f (5).png" alt="logo FAI"
+        width="60" height="50">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class=" menu p-light p-dark "><i class="fas fa-bars"></i></span>
       </button>
-      <div class="collapse navbar-collapse " id="navbarNav">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse pt-4" id="navbarNav">
+        <ul class="navbar-nav my-auto">
           <li class="nav-item">
-            <a class="p-lighter p-darker nav-link" href="{% url 'home' %}">Shop</a>
+            <a class="p-lighter p-darker nav-link" href="{% url 'home' %}">SHOP</a>
           </li>
-  
-          <li class="nav-item">
+          <li class="nav-item ">
             {% if request.user.is_authenticated %}
-            <a class="p-lighter p-darker nav-link" href="{% url 'training' %}">Training</a>
-            <a class="p-lighter p-darker nav-link" href="{% url 'trials' %}">Trials</a>
+            <li class="nav-item">
+              <a class="p-lighter p-darker nav-link" href="{% url 'training' %}">TRAINING</a>
+            </li>
+            <li class="nav-item">
+              <a class="p-lighter p-darker nav-link" href="{% url 'trials' %}">TRIALS</a>
+            </li>
             {% else %}
-            <a class="p-lighter p-darker nav-link" href="">Training</a>
-            <a class="p-lighter p-darker nav-link" href="">Trials</a>
+            <li class="nav-item">
+              <a class="p-lighter p-darker nav-link" href="">TRAINING</a>
+            </li>
+            <li class="nav-item">
+              <a class="p-lighter p-darker nav-link" href="">TRIALS</a>
+            </li>
             {% endif %}
           </li>
           <li class="nav-item dropdown">
@@ -111,7 +120,7 @@
                 <p class="my-0">My Account</p>
               </div>
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            <div class="dropdown-menu border-0 dropdownacademy" aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
               <a href="" class="dropdown-item">Product / Training Management</a>
