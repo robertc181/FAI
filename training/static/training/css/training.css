@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Orbitron:wght@900&family=Roboto+Condensed&display=swap');
+
+.sessiondayp{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 1px;
+    padding-bottom: 3px;
+
+
+
+}
+
+.bold p {
+    color: white !important;
+}
+
+.time p {
+    color: white !important;
+}
+
+.sessionday{
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    font-weight: bold;
+}
+
+.sessionname{
+    position: absolute;
+    top: 90px;
+    left: 30px;
+    color: white;
+}
+
+
+.trainingsessions{
+    font-family: 'M PLUS 1p', sans-serif;
+    
+}
+
+
+.sessiondayp{
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.sessioninfo{
+    position: absolute;
+    left: 0px;
+    top: 50px;
+}
+
+.bold{
+    font-weight: bold;
+    font-size: large;
+}
+
+.viewlink a{
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: white;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
+}
+
+.viewlink a:hover{
+   text-decoration: none;
+   background-color: rgb(230, 230, 230);
+}
+
+.commentssection p h1{
+    font-family: 'Nunito', sans-serif;
+}
