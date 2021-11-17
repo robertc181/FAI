@@ -1,5 +1,11 @@
 {% extends "academy-base.html" %}
 {% load static %}
+{% load bag_tools %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'training/css/training.css' %}">
+{% endblock %}
+
 
 {% block page_header %}
 <div class="container header-container">
@@ -11,11 +17,11 @@
 
 {% block content %}
 
-<div class="container-fluid callout-container">
+<div class="container-fluid ">
 
     <!-- callout -->
 
-    <div class="container-fluid callout-container">
+    <div class="container-fluid ">
         <div class="opaque-overlay">&nbsp;</div>
 
         <section class="callout jumbotron text-center">
@@ -33,22 +39,41 @@
     <div class="training-container col-10 offset-1">
         <div class="row align-items-center ">
             {% for trial in trials %}
-            <div class="col">
+            <div class="col ">
                 <div class="box">
-                    <p>{{ trial.date }}</p>
-                    <p>{{ trial.name }}</p>
-                    <p>{{ trial.time }}</p>
+                    <div class="sessionday">
+                        <p class="sessiondayp">Trial</p>
+                    </div>
+                    <ul class="sessioninfo">
+                        <li>
+                            <div class="bold">
+                                <p>{{ trial.name }}</p>
 
-                    <!-- If user has been selected show -->
-                    {% if trial.player_selected %}
-                    <a href="{% url 'trial_detail' trial.id %}" >See event</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="time">
+                                <p></p>
 
-                    {% else %}
-                    <!-- If user has not been selected show -->
-                    <p>You have not been called for this trial</p>
-                    <p>Keep up with your training and you may be selected next time</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="viewlink">
+                                <!-- If user has been selected show -->
+                                {% if trial.player_selected %}
+                                <a href="{% url 'trial_detail' trial.id %}">See event</a>
 
-                    {% endif %}
+                                {% else %}
+                                <!-- If user has not been selected show -->
+                                <div class="time">
+                                    <p>You have not been called for this trial</p>
+                                </div>
+
+                                {% endif %}
+
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
             {% if forloop.counter|divisibleby:1 %}
@@ -74,8 +99,6 @@
             {% endfor %}
         </div>
     </div>
-</div>
-</div>
 </div>
 
 

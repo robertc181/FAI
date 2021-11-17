@@ -1,5 +1,12 @@
 {% extends "academy-base.html" %}
 {% load static %}
+{% load bag_tools %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'trials/css/trials.css' %}">
+{% endblock %}
+
+
 
 {% block page_header %}
 <div class="container header-container">
@@ -11,17 +18,17 @@
 
 {% block content %}
 
-<div class="container-fluid callout-container">
+<div class="container-fluid callout-container bg-transparent">
 
     <!-- callout -->
 
     <div class="container-fluid callout-container">
-        <div class="opaque-overlay">&nbsp;</div>
 
         <section class="callout jumbotron text-center">
-            <p class="highlighted">{{ trial.date }}</p>
-            <h1 class="p-light p-dark jumbotron-header">Congratulations you have been chosen for {{ trial.name }}
+            <h1 class=" highlighted p-light p-dark jumbotron-header">Congratulations you have been chosen for {{ trial.name }}
             </h1>
+            <p class="highlighted">Trial Date : {{ trial.date }}</p>
+            <p class="highlighted">Trial Time : {{ trial.time }}</p>
         </section>
     </div>
 
