@@ -29,12 +29,16 @@
 
         <!-- callout -->
 
-        <div class="container-fluid callout-container">
+        <div class="container-fluid callout-container pt-5">
             
             <section class="callout jumbotron text-center mx-auto bg-transparent text-light">
                 <h1 class="p-light p-dark jumbotron-header">Look your best on and off the pitch
                 </h1>
-                <button class=" button button1" onclick="contact()">View products</button>
+                <div class="container pt-5">
+                    <div class="row">
+                        <a class="btn button button1 mx-auto" href="{% url 'products' %}">View products</a>
+                    </div>
+                </div>
             </section>
         </div>
 
