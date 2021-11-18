@@ -34,6 +34,7 @@ def session_detail(request, session_id):
             new_comment.save()
     comment_form = CommentForm()
     comments = Comment.objects.filter(session=session)
+    session.attendees_list = session.attendees.all()
     context = {
         'session': session,
         'comment_form': comment_form,
@@ -51,8 +52,10 @@ def session_attend(request, session_id):
     session.attendees.add(request.user)
     session.save()
     session.attendees_list = session.attendees.all()
+    comment_form = CommentForm()
     context = {
         'session': session,
+        'comment_form': comment_form,
         'comments': comments
     }
 
@@ -65,8 +68,13 @@ def session_unattend(request, session_id):
     session = get_object_or_404(Session, pk=session_id)
     session.attendees.remove(request.user)
     session.save()
+    comments = Comment.objects.filter(session=session)
+    comment_form = CommentForm()
+    session.attendees_list = session.attendees.all()
     context = {
         'session': session,
+        'comment_form': comment_form,
+        'comments': comments
     }
 
     return render(request, 'training/session_detail.html', context)
