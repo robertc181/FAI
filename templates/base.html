@@ -55,7 +55,7 @@
                     <a class="nav-link" href="{% url 'products' %}?category=training_wear">All Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-toggle="dropdown">Join the Academy</a>
+                    <a class="nav-link" data-toggle="dropdown">Academy</a>
                     <div class="dropdown-menu border-2 dropdown" aria-labelledby="account-link">
                         <a href="{% url 'account_login' %}" class="dropdown-item  text-dark">Sign in </a>
                         <a href="{% url 'account_signup' %}" class="dropdown-item text-dark">Register</a>
@@ -92,13 +92,26 @@
                 </li>
                 <li class="list-group-item text-light">
                     <a class="bag" href="{% url 'view_bag' %}"><i class="fas fa-shopping-bag"></i></a>
+                    
                 </li>
             </ul>
         </div>
         <!--  -->
         <ul class=" navbar-nav w-auto right my-auto functiondivnav functionaltyul">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="" href="{% url 'view_bag' %}"><i class="fas fa-shopping-bag"></i></a>
+            </li> -->
+            <li class="nav-item">
+                <div class="my-0">
+                    {% if grand_total %}
+                        ${{ grand_total|floatformat:2 }}
+                    {% else %}
+                        $0.00
+                    {% endif %}
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="" href="{% url 'view_bag' %}"><i class="fas fa-shopping-bag"></i>
             </li>
             <li class="nav-item">
                 <i onclick="openForm()" class="fa fa-search"></i>
@@ -194,8 +207,13 @@
     </div>
 
     {% if messages %}
-    <div class="message-container"></div>
+    <div class="message-container">
+        {% for message in messages %}
+            {% include 'includes/toasts/toast_success.html' %}
+        {% endfor %}
+    </div>
     {% endif %}
+
 
     {% block page_header %}
     {% endblock %}
@@ -204,6 +222,7 @@
     {% endblock %}
 
     {% block postloadjs %}
+   
     <script>
         // credit to ww3 schools for media popup
 
@@ -222,8 +241,13 @@
         function CloseMainNavMenu() {
             document.getElementById("popupnavsm").style.display = "none";
         }
+    
     </script>
     {% endblock %}
+    <script>
+        $('.toast').toast('show');
+        console.log('Toast');
+   </script>
 
 
 </body>

@@ -34,9 +34,10 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
   {% endblock %}
 
   {% block extra_js %}
@@ -86,7 +87,7 @@
       <a class="navbar-brand" href="{% url 'join_academy' %}"><img src="/media/92be6962682d46918deb877977e7925f (5).png" alt="logo FAI"
         width="60" height="50">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class=" menu p-light p-dark "><i class="fas fa-bars"></i></span>
       </button>
@@ -105,19 +106,19 @@
             </li>
             {% else %}
             <li class="nav-item">
-              <a class="p-lighter p-darker nav-link" href="">TRAINING</a>
+              <a class="p-lighter p-darker nav-link" href="{% url 'account_login' %}">TRAINING</a>
             </li>
             <li class="nav-item">
-              <a class="p-lighter p-darker nav-link" href="">TRIALS</a>
+              <a class="p-lighter p-darker nav-link" href="{% url 'account_login' %}">TRIALS</a>
             </li>
             {% endif %}
           </li>
           <li class="nav-item dropdown">
-            <a class="p-lighter p-darker nav-link " href="#" id="user-options" data-toggle="dropdown"
+            <a class="p-lighter p-darker nav-link" href="#" id="user-options" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               <div class="text-center">
-                <div><i class="fas fa-user fa-lg"></i></div>
-                <p class="my-0">My Account</p>
+                <div class=""><i class="fas fa-user fa-lg"></i></div>
+                <p class="my-0 dark">My Account</p>
               </div>
             </a>
             <div class="dropdown-menu border-0 dropdownacademy" aria-labelledby="user-options">
@@ -138,8 +139,22 @@
   </nav>
 
   {% if messages %}
-  <div class="message-container"></div>
-  {% endif %}
+      <div class="message-container">
+          {% for message in messages %}
+              {% with message.level as level %}
+                  {% if level == 40 %}
+                      {% include 'includes/toasts/toast_error.html' %}
+                  {% elif level == 30 %}
+                      {% include 'includes/toasts/toast_warning.html' %}
+                  {% elif level == 25 %}
+                      {% include 'includes/toasts/toast_success.html' %}
+                  {% else %}
+                      {% include 'includes/toasts/toast_info.html' %}
+                  {% endif %}
+              {% endwith %}
+          {% endfor %}
+      </div>
+    {% endif %}
 
   {% block page_header %}
   {% endblock %}
@@ -148,9 +163,13 @@
   {% endblock %}
 
   {% block postloadjs %}
+
   {% endblock %}
 
-
+  <script>
+    $('.toast').toast('show');
+    console.log('toast loaded');
+</script>
 </body>
 
 </html>
