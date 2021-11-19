@@ -1,0 +1,1 @@
+web: gunicorn FAI.wsgi:application
