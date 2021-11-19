@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Session, Comment
 from .forms import CommentForm
+from django.contrib import messages
 
 
 
@@ -58,7 +59,7 @@ def session_attend(request, session_id):
         'comment_form': comment_form,
         'comments': comments
     }
-
+    messages.success(request, f'You are attending the {session.name} on {session.day}')
     return render(request, 'training/session_detail.html', context)
 
 
@@ -72,11 +73,12 @@ def session_unattend(request, session_id):
     comment_form = CommentForm()
     session.attendees_list = session.attendees.all()
     context = {
+    
         'session': session,
         'comment_form': comment_form,
         'comments': comments
     }
-
+    messages.info(request, f'You are not attending the {session.name} on {session.day}')
     return render(request, 'training/session_detail.html', context)
 
 
