@@ -74,7 +74,7 @@
         {% endfor %}
       </div>
     </div>
-    <div class="col-md-8 card mb-4  mt-3 mx-auto commentssection">
+    <div class="col-md-8 card mb-4  mt-3 mx-auto commentssection ">
       <div class="card-body">
         {% if new_comment %}
         <div class="alert alert-success" role="alert">
@@ -83,7 +83,7 @@
         {% else %}
         <form method="POST" style="margin-top: 1.3em;" action="{% url 'session_detail' session.id %}">
           <h3>Leave a comment</h3>
-          {{ comment_form.as_p }}
+          {{ comment_form | crispy }}
           {% csrf_token %}
           <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
           {% endif %}

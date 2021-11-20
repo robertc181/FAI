@@ -13,6 +13,28 @@
 
 }
 
+.jumbotron{
+    border-radius: 0px;
+}
+
+.callout {
+    background: url('/media/image (5).png');
+    background-size: cover;
+    display: left;
+    font-family: 'M PLUS 1p', sans-serif;
+    z-index: 2;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    color: rgb(255, 255, 255);
+
+}
+
+.container-fluid{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
 .bold p {
     color: white !important;
 }
