@@ -77,7 +77,7 @@
                     <a class="nav-item-head" href="{% url 'products' %}?category=training_wear">TRAINING GEAR</a>
                 </li>
                 <li>
-                    <a class="nav-item-head" href="{% url 'products' %}?category=boots">FOOTBALL BOOTS</a>
+                    <a class="nav-item-head" href="{% url 'products' %}?category=footballs">FOOTBALLS</a>
                 </li>
                 <li>
                     <a class="nav-item-head" href="{% url 'products' %}?category=essentials">ESSENTIALS</a>
@@ -104,9 +104,9 @@
             <li class="nav-item">
                 <a class="my-0">
                     {% if grand_total %}
-                        ${{ grand_total|floatformat:2 }}
+                        €{{ grand_total|floatformat:2 }}
                     {% else %}
-                        $0.00
+                        €0.00
                     {% endif %}
                 </a>
             </li>
@@ -147,7 +147,7 @@
                             <a class="" href="{% url 'products' %}?category=training_wear">TRAINING GEAR</a>
                         </li>
                         <li class="list-group-item">
-                            <a class="" href="{% url 'products' %}?category=boots">FOOTBALL BOOTS</a>
+                            <a class="" href="{% url 'products' %}?category=footballs">FOOTBALLS</a>
                         </li>
                         <li class="list-group-item">
                             <a class="" href="{% url 'products' %}?category=essentials">ESSENTIALS</a>
@@ -184,10 +184,10 @@
         <div class="formPopup" id="popupForm" style=" display:none;">
             <div class="container">
                 <div class="row">
-                    <div class=" searchbox pt-5">
+                    <div class=" searchbox">
                         <form method="GET" action="{% url 'products' %}">
                             <input class="serchbox" type="text" type="text" name="q" placeholder="Search our site">
-                            <button class="searchbtn" type="submit">
+                            <button class="searchbtn " type="submit">
                                 <a class="icon">
                                     <i class="fas fa-search"></i>
                                 </a>
