@@ -48,6 +48,10 @@ ul {
     color: white;
 }
 
+.bg-dark{
+    background-color: #00040d!important;
+}
+
 /* ---------------------------------------topnav */
 
 nav{
@@ -126,7 +130,7 @@ nav{
     top: 20px;
     right: 30px;
     font-size: 20px;
-    color: rgb(44, 44, 44);
+    color: rgb(255, 255, 255);
 
 }
 
@@ -530,7 +534,7 @@ nav{
 .formPopup{
     position: absolute;
     top: 0;
-    background-color: white;
+    background-color: #01050e!important;
     height: 150px;
     width: 100%;
     z-index: 5;
@@ -538,6 +542,7 @@ nav{
 }
 
 .xbtn{
+    color: white;
     position: absolute;
     right: 50px;
     top: 25px;
