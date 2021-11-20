@@ -34,7 +34,7 @@ def checkout(request):
 
     if request.method == 'POST':
         bag = request.session.get('bag', {})
-
+        current_bag = bag_contents(request)
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -75,7 +75,10 @@ def checkout(request):
                     )
                     order.delete()
                     return redirect(reverse('view_bag'))
-
+            order.grand_total = current_bag['grand_total']
+            order.order_total = current_bag['total']
+            order.delivery_cost = current_bag['delivery']
+            order.save()
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
@@ -104,9 +107,11 @@ def checkout(request):
 
     template = 'checkout/checkout.html'
     context = {
+
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
+        'total':total,
     }
 
     return render(request, template, context)
@@ -124,7 +129,7 @@ def checkout_success(request, order_number):
 
     if 'bag' in request.session:
         del request.session['bag']
-
+    print(order)
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
