@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Roboto+Condensed&display=swap');
 
 
@@ -11,7 +10,7 @@ html {
 }
 
 body {
-    background: url('/media/lionel-messi-sports-football-hd-wallpaper-preview.jpg');
+    background: url('/media/header-image.png');
     background-size: cover;
     height: calc(50vh - 164px);
     color: rgb(34, 34, 34);
@@ -270,12 +269,6 @@ nav{
 
 }
 
-.searchbtn{
-    border: none;
-    background-color: transparent;
-    color: white;
-
-}
 
 .icon{
     font-size: 19px;
@@ -535,7 +528,7 @@ nav{
     position: absolute;
     top: 0;
     background-color: #01050e!important;
-    height: 150px;
+    height: 210px;
     width: 100%;
     z-index: 5;
 
@@ -545,7 +538,7 @@ nav{
     color: white;
     position: absolute;
     right: 50px;
-    top: 25px;
+    top: 40px;
     font-size: 25px;
 }
 
@@ -558,10 +551,21 @@ nav{
     border-top: none;
     border-left: none;
     border-right: none;
-    width: 50%;
+    width: 75%;
 }
 
 .loginPopup{
     z-index: 4;
 }
 
+.searchbox{
+    margin-top: 80px !important;
+}
+
+.searchbtn{
+    border: none;
+    background-color: transparent;
+    color: white;
+    
+
+}
