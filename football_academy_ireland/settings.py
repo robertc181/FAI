@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-pzu@x*eloql^&jubxn$6-j+)v3vz7#zary+adx=gecc4k)nrbk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['football-academy-ireland.herokuapp.com/', 'localhost']
+ALLOWED_HOSTS = ['football-academy-ireland.herokuapp.com', 'localhost']
 
 
 # Application definition
