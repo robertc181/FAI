@@ -1,1 +1,1 @@
-web: gunicorn FAI.wsgi:application
+web: gunicorn football_academy_ireland.wsgi:application
