@@ -125,6 +125,7 @@
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
               <a href="/admin" class="dropdown-item">Product / Training Management</a>
+              <a href="{% url 'add_session' %}" class="dropdown-item">Add training session</a>
               {% endif %}
               <a href="{% url 'account_logout'%}?next={% url 'join_academy' %}" class="dropdown-item">Logout</a>
               {% else %}

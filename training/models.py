@@ -27,7 +27,7 @@ class Session(models.Model):
 
 
 class Comment(models.Model):
-    session = models.ForeignKey(Session,on_delete=models.CASCADE,related_name='comments')
+    session = models.ForeignKey(Session,on_delete=models.CASCADE,related_name ='comments')
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()

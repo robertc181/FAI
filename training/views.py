@@ -1,9 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from .models import Session, Comment
-from .forms import CommentForm
+from .forms import CommentForm, SessionForm
 from django.contrib import messages
-
-
 
 # Create your views here.
 
@@ -105,3 +103,26 @@ def post_detail(request, slug):
                                            'comments': comments,
                                            'new_comment': new_comment,
                                            'comment_form': comment_form})
+
+
+def add_session(request):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store admin can do that')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = SessionForm(request.POST, request.FILES)
+        if form.is_valid():
+            session = form.save()
+            messages.success(request, 'Successfully added a session!')
+            return redirect(reverse('session_detail', args=[session.id]))
+        else:
+            messages.error(request, 'Failed to add session. Please check the details and try again')
+    else: 
+        form = SessionForm()
+    template = 'training/add_session.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
