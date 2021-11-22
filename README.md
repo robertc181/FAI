@@ -1,5 +1,9 @@
 # FAI Football Academy Ireland
 
+FAI is an online ecommerce shop that allows users to purchase football gear and accesories and sign up for a yearly payed subscription to the academy where the user will have access to all the training sessions and opt in to going to training and see other academy players profiles.
+
+you can find the live site HERE
+
 # Contents
 
 1. Summary
@@ -46,21 +50,17 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 
 6. As a new site user, I want to be able to make a purchase without needing to create a profile
 
-7. As a new site user, I want to be able to easily create a profile
+7. As a new site user, I want to be able to easily create an academy profile
 
-8. As a new site user, I want to be able to easily create an academy profile
+8. As a new site user, I want to be able to view training sessions and have the option to go or not.
 
-9. As a new site user, I want to be able to easily create an academy yearly subscription
+9. As a new site user, I want to be able to view trials and see if i have been selected for a trial or not.
 
-10. As a new site user, I want to be able to view my profile and my details about training , subscriptions and information.
+10. As a new site user, I want to be able to sort products on a page
 
-11. As a new site user, I want to be able to view training sessions and have the option to go or not.
+11. As a new site user, I want to be able to sort by specific categories
 
-12. As a new site user, I want to be able to sort products on a page
-
-13. As a new site user, I want to be able to sort by specific categories
-
-14. As a new site user, I want to be able to amend the items in my bag including quantities and removing them entirely
+12. As a new site user, I want to be able to amend the items in my bag including quantities and removing them entirely
 
  
 ### player site user's goals:
@@ -69,17 +69,21 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 
 2. As a returning site user, I want to be able to recover a forgotten password.
 
-3. As a returning site user, I want to be able to have a personalised profile.
+3. As a returning site user, I want to be able to view my trials. 
 
-4. As a returning site user, I want to be able to view my past orders.
-
-5. As a returning site user, I want to be able to view my training.
+4. As a returning site user, I want to be able to view my training.
 
 ### Admin user's goals
 
 1. As a site owner, I want to be able to create, edit and delete products.
+
 2. As a site owner, I want to be able to create training sessions and see who is attending.
+ 
 3. As a site owner, I want to be able to create delete and edit training sessions.
+
+4. As a site owner, I want to be able to create delete and edit trials.
+ 
+5. As a site owner, I want to be able to create trials and pick which players will attend.
 
 ## Scope
 
@@ -88,19 +92,9 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 #### For ease of use:
 
 * Navigation bar which is simple and easy to navigate
-* Search bar
+* Search button and dropdown serach bar nav
 * Button for academy profile
-
-### To ensure the database is up to date and editable:
-
-* Function to add a product
-* Function to edit a product
-* Function to delete a product
-* For the products to be only editable by a superuser
-* Function to add a training session
-* Function to edit a training session
-* Function to delete a training session
-* For the training session to be only editable by a superuser
+* Small navbar sm for phone size 
 
 ### Content requirements:
 
