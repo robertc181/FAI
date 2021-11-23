@@ -24,9 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
+# os.environ.get('SECRET_KEY', '')
+# 'django-insecure-pzu@x*eloql^&jubxn$6-j+)v3vz7#zary+adx=gecc4k)nrbk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = "DEVELOPMENT" in os.environ
+# "DEVELOPMENT" in os.environ
+# True
 
 ALLOWED_HOSTS = ['football-academy-ireland.herokuapp.com', 'localhost']
 
