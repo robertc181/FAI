@@ -6,7 +6,7 @@
             "name": "Strength and conditioning session",
             "description": "In the gym , bring your foam rollers",
             "time": 18.00,
-            "attendees": ["david", "sam", "cononr", "rob", "harry"]
+            "attendees": ["", "", ""]
         }
     },
 
@@ -18,7 +18,7 @@
             "name": "saturday session U20s",
             "description": "Today we will be working with the goalkeepers to recreate many set piece situations, bring out nets",
             "time": 13.00,
-            "attendees": ["james", "sam", "cononr"]
+            "attendees": ["", ""]
         }
     },
 
@@ -30,7 +30,7 @@
             "name": "saturday session U20s",
             "description": "Today we will be working with the goalkeepers to recreate many set piece situations, bring out nets",
             "time": 13.00,
-            "attendees": ["james", "sam", "cononr"]
+            "attendees": ["", ""]
         }
     }
 ]
