@@ -3,7 +3,7 @@
 {% load bag_tools %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'training/css/training.css' %}">
+<link rel="stylesheet" href="{% static 'training/css/training.css' %}">
 {% endblock %}
 
 
@@ -40,63 +40,68 @@
     </div>
 </div>
 
-    <div class="row">
-        <div class="training-container col-10 offset-1">
-            <div class="row align-items-center ">
-                {% for session in sessions %}
-                <div class="col ">
-                   <div class="box">
+<div class="row">
+    <div class="training-container col-10 offset-1">
+        <div class="row align-items-center ">
+            {% for session in sessions %}
+            <div class="col ">
+                <div class="box">
                     <div class="sessionday">
                         <p class="sessiondayp">{{ session.day }}</p>
                     </div>
-                       <ul class="sessioninfo">
-                           <li>
+                    <ul class="sessioninfo">
+                        <li>
                             <div class="bold">
                                 <p>{{ session.name }}</p>
-                                
+
                             </div>
-                           </li>
-                           <li>
+                        </li>
+                        <li>
                             <div class="time">
                                 <p>Time : {{ session.time }}</p>
-                                
+
                             </div>
-                           </li>
-                           <li>
+                        </li>
+                        <li>
                             <div class="viewlink">
+                                {% if request.user.is_superuser %}
+                                <small class="ml-3">
+                                    <a href="{% url 'edit_session' session.id %}">Edit</a> | 
+                                    <a class="text-danger" href="{% url 'delete_session' session.id %}">Delete</a>
+                                </small>
+                                {% endif %}
                                 <a href="{% url 'session_detail' session.id %}">View</a>
                             </div>
-                           </li>
-                        </ul>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
-                {% if forloop.counter|divisibleby:1 %}
-                <div class="col-12 d-sm-none mb-5 ">
-                    
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:2 %}
-                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                    
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:3 %}
-                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                   
-                </div>
-                {% endif %}
-                {% if forloop.counter|divisibleby:4 %}
-                <div class="col-12 d-none d-xl-block mb-5">
-                   
-                </div>
-                {% endif %}
-                {% endfor %}
             </div>
+            {% if forloop.counter|divisibleby:1 %}
+            <div class="col-12 d-sm-none mb-5 ">
+
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:2 %}
+            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:3 %}
+            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+
+            </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:4 %}
+            <div class="col-12 d-none d-xl-block mb-5">
+
+            </div>
+            {% endif %}
+            {% endfor %}
         </div>
     </div>
+</div>
 
 
 
-    
+
 {% endblock %}
-
