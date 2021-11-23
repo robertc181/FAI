@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.shortcuts import render, reverse,  get_object_or_404, redirect
 from .models import Session, Comment
 from .forms import CommentForm, SessionForm
 from django.contrib import messages
@@ -123,6 +123,43 @@ def add_session(request):
     template = 'training/add_session.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+def delete_session(request, session_id):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store admin can do that')
+        return redirect(reverse('home'))
+
+    session = get_object_or_404(Session, pk=session_id)
+    session.delete()
+    messages.success(request, 'Session deleted')
+    return redirect(reverse('training'))
+
+
+def edit_session (request, session_id):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store admin can do that')
+        return redirect(reverse('home'))
+
+    session = get_object_or_404(Session, pk=session_id)
+    if request.method == 'POST':
+        form = SessionForm(request.POST, request.FILES, instance=session)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated the session!')
+            return redirect(reverse('session_detail', args=[session.id]))
+        else:
+            messages.error(request, 'Failed to update the session. Please check the details and try again')
+    else:
+        form = SessionForm(instance=session)
+        messages.info(request, 'You are editing this session')
+
+    template = 'training/edit_session.html'
+    context = {
+        'form': form,
+        'session': session,
     }
 
     return render(request, template, context)
