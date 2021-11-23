@@ -61,6 +61,14 @@
                         <a href="{% url 'account_signup' %}" class="dropdown-item text-dark">Register</a>
                     </div>
                 </li>
+                {% if request.user.is_superuser %}
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="dropdown">Product Management</a>
+                    <div class="dropdown-menu border-2 dropdown" aria-labelledby="account-link">
+                        <a href="{% url 'add_product' %}" class="dropdown-item text-dark">Add Product</a>
+                    </div>
+                </li>
+                {% endif %}
             </ul>
         </div>
     </nav>
@@ -174,6 +182,14 @@
                         <li class="list-group-item">
                             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                         </li>
+                        {% if request.user.is_superuser %}
+                        <li class="list-group-item">
+                            <p class="headsidenav">Product Management</p>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{% url 'add_product' %}" class="dropdown-item">Add Product</a>
+                        </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
