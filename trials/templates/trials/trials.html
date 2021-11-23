@@ -70,6 +70,12 @@
                                 </div>
 
                                 {% endif %}
+                                {% if request.user.is_superuser %}
+                                <small class="ml-3">
+                                    <a href="{% url 'edit_trial' trial.id %}">Edit</a> | 
+                                    <a class="text-danger" href="{% url 'delete_trial' trial.id %}">Delete</a>
+                                </small>
+                                {% endif %}
 
                             </div>
                         </li>
