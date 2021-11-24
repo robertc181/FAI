@@ -52,7 +52,7 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 
 7. As a new site user, I want to be able to easily create an academy profile
 
-8. As a new site user, I want to be able to view training sessions and have the option to go or not.
+8. As a new site user, I want to be able to view training sessions and have the option to attend or unattend.
 
 9. As a new site user, I want to be able to view trials and see if i have been selected for a trial or not.
 
@@ -225,56 +225,63 @@ Please click the below link to view the wireframe
 ## Testing
 
 
-### New site user's testing:
+### New site user's goals:
 
 1. As a new visitor to the website I want to navigate the site with ease and no confusion.
+   * A navbar with links clearly labeled and working is present throughout the website and is shown in a clearer way in the phone size in bothe the academy and shop.
 
 2. As a new site user, I want to be able to browse and search for products
+   * A button is present on the shop home page wgere a user can click to view products, they can also click all products or products in the nav which will open a products page showing all products on the website, A user can also use the search bar to serach for any products on the website. 
 
 3. As a new site user, I want to be able to view the details of individual products
+   * In the products page you can click on any product this will dring you to that products details page where you can pick your size and add the product to your bag.
 
 4. As a new site user, I want to be able to understand the intent of the page
+   * there is a toasts system accross the full app where when a task is completed or underway the user is shown an error allert or info message which lets them know the intent of the page and what functions they are doing.
 
-5. As a new site user, I want to understand easily how to navigate the page and access the facilities provided
+5. As a new site user, I want to be able to make a purchase without needing to create a profile
+   * A user can add a product to thier bag and then checkout , fill in thier details and purchase a product without having to create an account with fai.
 
-6. As a new site user, I want to be able to make a purchase without needing to create a profile
+6. As a new site user, I want to be able to easily create an academy profile
+   * There is an academy button in the shop page where a user can either sign in or register for the academy, this will bring the user to a register page in the academy part of the website where they can register with FAI.
 
-7. As a new site user, I want to be able to easily create a profile
+7. As a new site user, I want to be able to view training sessions and have the option to attend or unattend.
+   * When a user has successfully created an account and signed in they can view all the training sessions and view them. The user can also click the attend button to attend the sesssion or click the unattend button to unattend the session.
 
-8. As a new site user, I want to be able to easily create an academy profile
+8. As a new site user, I want to be able to view trials and see if i have been selected for a trial or not.
+   * A user has to be selected by an admin to have access to a trial, If so a user can then view that trial and see when it is.
 
-9. As a new site user, I want to be able to easily create an academy yearly subscription
+9. As a new site user, I want to be able to sort products on a page
+   * A user can click to sort products on the products page in many different orders 
 
-10. As a new site user, I want to be able to view my profile and my details about training , subscriptions and information.
+10. As a new site user, I want to be able to sort by specific categories
+   * A user can click to sort products on the products page by category
 
-11. As a new site user, I want to be able to view training sessions and have the option to go or not.
+11. As a new site user, I want to be able to amend the items in my bag including quantities and removing them entirely
+   * A user can remove a product from thier bag and add more quantity or less quantity if needed.
 
-12. As a new site user, I want to be able to sort products on a page
-
-13. As a new site user, I want to be able to sort by specific categories
-
-14. As a new site user, I want to be able to amend the items in my bag including quantities and removing them entirely
-
-
-### player/user site user's testing:
+ 
+### player site user's goals:
 
 1. As a returning site user, I want to be able to log in and out.
 
 2. As a returning site user, I want to be able to recover a forgotten password.
 
-3. As a returning site user, I want to be able to have a personalised profile.
+3. As a returning site user, I want to be able to view my trials. 
 
-4. As a returning site user, I want to be able to view my past orders.
+4. As a returning site user, I want to be able to view my training.
 
-5. As a returning site user, I want to be able to view my training.
-
-### admin testing:
+### Admin user's goals
 
 1. As a site owner, I want to be able to create, edit and delete products.
 
 2. As a site owner, I want to be able to create training sessions and see who is attending.
-
+ 
 3. As a site owner, I want to be able to create delete and edit training sessions.
+
+4. As a site owner, I want to be able to create delete and edit trials.
+ 
+5. As a site owner, I want to be able to create trials and pick which players will attend.
 
 ## Performance testing:
 
