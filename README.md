@@ -112,7 +112,7 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 ### Interaction design:
 
 * User friendly interface to ensure usability and to encourage the user to return
-
+* Ability to exit all popups with an x to exit and close the popup.
 * Responsive and visible buttons which change on hover to provide user feedback as they navigate the site
 
 ### Information Architecture:
@@ -121,29 +121,33 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 * Responsive navigation bar - adjusting for mobile for ease of use
 * Responsive forms to ensure they fit within the designated spaces, no matter what device is being used or the size of the screen
 * Mainly all features appropriate size and responsive for mobile and desktop viewing
+* Products page is fully responsive and all pics are the same size
 
 
 ## Skeleton
 
 ### wireframe
-
+Please click the below link to view the wireframe
 * - [Wireframes]()
 
 ## Surface
 
 ### The intention of the website is to be clean, crisp and clear
 
-* 
+* The font family choosen was a mixture of Ubuntu Roboto and open sans 
+* The colour scheme chosen was a mix of white and black with hints of red and green in the images, Which makes the site look sports related and brings a professional look to the website, Ive also derkend all my images to allow any text infront to be seen clearly with no confucion or lack of clarity.
+* The cover image was chosen as I felt it represented Football really well and also looked well with the rest of the website and due to the blur it allows it not to stck out to much and take over from the text and other features of the website.  
+
 
 # Plan
 
 ## initial plan
 
-* 
+* Initialy i had chosen to create a player profile and allow users to create a profile ontop of thier register but later decided not to go down this route as it was too much too late and I had to get allot of other things to do in the project 
 
 ## Changes to plan
 
-* 
+* I changed to a less intricate plan where a user would sign in and browse training and trials and create comments instaed of creating a personal profile where this can be done.
 
 # Features
 
@@ -155,31 +159,43 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 
 | Feature        | Detailes           | 
 | ------------- |:-------------:| 
-| login     | | 
-| logout     | | 
-| create profile | | 
-| edit profile     | | 
-| create event     | | 
-| edit event     | | 
-| search player     | | 
-| open player profile account     |  | 
-| watch event     | |
-| event being watched     | | 
+| login     |     The user can register and log into their own account with personalised features   |      
+| logout     |    There is a log out functionality on the page - this is especially important for users of a shared device   |  
+| register  |   There is a register functionality on the page |
+| add product     |     Superusers can sign in and add new products|
+| edit product     |      Superusers can sign in and edit existing products|
+| delete product     |    Superusers can sign in and delete a product|
+| add training session  |   Superusers can sign in and add new training session  |
+| edit training session    |   Superusers can sign in and edit existing training session|
+| delete training session |   Superusers can sign in and add new training session  |                    
+| add trial |  Superusers can sign in and add new trials            |     
+| edit trial |   Superusers can sign in and edit existing trials    |
+| delete trial |   Superusers can sign in and delete a trial      |     
+| create comment|   Users can create a commment in training sessions|
+| view comments |   Users can view all comments and see when they were created|
+| select player for trial |  superusers can select players for trials|
+| view trial if selected |  users can view a trial if they have been selected for that trial|
+| search product |  users can search for a product|
+| add product to bag|  users can add products to thier bags|
+| checkout | Users can checkout and pay for thier product|
+| unattend training | Users can Unattend a training session|
+| attend training | Users can attend a training session |
+        
 
 
 ## Features left to implement
 
 | Feature        | Detailes           | 
 | ------------- |:------------:| 
-| follow player     |  | 
-| see scouts     | | 
-| positions     | | 
+| create profile|  A player could sign in then view a profile which they could edit |
+|view my training| A player could view all of the training sessions he has chosen to go to in a profile |
+| view my trials | A player could view all of the trails they have been selected for in a profile |
 
 # Bugs
 
 | Feature        | Detailes     | 
 | ------------- |:-------------:| 
-
+| An error occured when attempting to deploy the site to heroku with ststic files and aws |
 
 
 # Technologies Used
@@ -199,6 +215,7 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 * Django
 * Favicon
 * Json
+* AWS
 
 
 # View
@@ -313,7 +330,7 @@ To deploy the app to Heroku from its GitHub repository, the following steps were
 9. Enter the following keys and values, which must match those in the env.py file created earlier:
 
 | Key        | Value           | 
-| ------------- |:-------------:| 
+| ------------- |-------------| 
 | IP   | 0.0.0.0 | 
 | PORT     | 5000 | 
 | SECRET_KEY     | app secret key  | 
