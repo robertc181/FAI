@@ -8,7 +8,7 @@ class Trial(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     time = models.DecimalField(max_digits=6, decimal_places=2)
-    selected_players = models.ManyToManyField(User)   # checkbox Y/N for all auth users ? 
+    selected_players = models.ManyToManyField(User)
 
     def __str__(self):
         return self.name
