@@ -195,7 +195,7 @@ Please click the below link to view the wireframe
 
 | Feature        | Detailes     | 
 | ------------- |:-------------:| 
-| An error occured when attempting to deploy the site to heroku with ststic files and aws |
+| An error occured when attempting to deploy the site to heroku with Collect Static files | I had to set PutObject and DeleteObject in my AWS S3 bucket.
 
 
 # Technologies Used
