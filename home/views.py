@@ -14,5 +14,6 @@ def get_home(request):
         )
         user.set_password('some password')
         user.save()
+        print(user.username)
 
     return render(request, 'home/index.html')
