@@ -52,7 +52,7 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 
 7. As a new site user, I want to be able to easily create an academy profile
 
-8. As a new site user, I want to be able to view training sessions and have the option to go or not.
+8. As a new site user, I want to be able to view training sessions and have the option to attend or unattend.
 
 9. As a new site user, I want to be able to view trials and see if i have been selected for a trial or not.
 
@@ -112,7 +112,7 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 ### Interaction design:
 
 * User friendly interface to ensure usability and to encourage the user to return
-
+* Ability to exit all popups with an x to exit and close the popup.
 * Responsive and visible buttons which change on hover to provide user feedback as they navigate the site
 
 ### Information Architecture:
@@ -121,29 +121,33 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 * Responsive navigation bar - adjusting for mobile for ease of use
 * Responsive forms to ensure they fit within the designated spaces, no matter what device is being used or the size of the screen
 * Mainly all features appropriate size and responsive for mobile and desktop viewing
+* Products page is fully responsive and all pics are the same size
 
 
 ## Skeleton
 
 ### wireframe
-
+Please click the below link to view the wireframe
 * - [Wireframes]()
 
 ## Surface
 
 ### The intention of the website is to be clean, crisp and clear
 
-* 
+* The font family choosen was a mixture of Ubuntu Roboto and open sans 
+* The colour scheme chosen was a mix of white and black with hints of red and green in the images, Which makes the site look sports related and brings a professional look to the website, Ive also derkend all my images to allow any text infront to be seen clearly with no confucion or lack of clarity.
+* The cover image was chosen as I felt it represented Football really well and also looked well with the rest of the website and due to the blur it allows it not to stck out to much and take over from the text and other features of the website.  
+
 
 # Plan
 
 ## initial plan
 
-* 
+* Initialy i had chosen to create a player profile and allow users to create a profile ontop of thier register but later decided not to go down this route as it was too much too late and I had to get allot of other things to do in the project 
 
 ## Changes to plan
 
-* 
+* I changed to a less intricate plan where a user would sign in and browse training and trials and create comments instaed of creating a personal profile where this can be done.
 
 # Features
 
@@ -155,31 +159,43 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 
 | Feature        | Detailes           | 
 | ------------- |:-------------:| 
-| login     | | 
-| logout     | | 
-| create profile | | 
-| edit profile     | | 
-| create event     | | 
-| edit event     | | 
-| search player     | | 
-| open player profile account     |  | 
-| watch event     | |
-| event being watched     | | 
+| login     |     The user can register and log into their own account with personalised features   |      
+| logout     |    There is a log out functionality on the page - this is especially important for users of a shared device   |  
+| register  |   There is a register functionality on the page |
+| add product     |     Superusers can sign in and add new products|
+| edit product     |      Superusers can sign in and edit existing products|
+| delete product     |    Superusers can sign in and delete a product|
+| add training session  |   Superusers can sign in and add new training session  |
+| edit training session    |   Superusers can sign in and edit existing training session|
+| delete training session |   Superusers can sign in and add new training session  |                    
+| add trial |  Superusers can sign in and add new trials            |     
+| edit trial |   Superusers can sign in and edit existing trials    |
+| delete trial |   Superusers can sign in and delete a trial      |     
+| create comment|   Users can create a commment in training sessions|
+| view comments |   Users can view all comments and see when they were created|
+| select player for trial |  superusers can select players for trials|
+| view trial if selected |  users can view a trial if they have been selected for that trial|
+| search product |  users can search for a product|
+| add product to bag|  users can add products to thier bags|
+| checkout | Users can checkout and pay for thier product|
+| unattend training | Users can Unattend a training session|
+| attend training | Users can attend a training session |
+        
 
 
 ## Features left to implement
 
 | Feature        | Detailes           | 
 | ------------- |:------------:| 
-| follow player     |  | 
-| see scouts     | | 
-| positions     | | 
+| create profile|  A player could sign in then view a profile which they could edit |
+|view my training| A player could view all of the training sessions he has chosen to go to in a profile |
+| view my trials | A player could view all of the trails they have been selected for in a profile |
 
 # Bugs
 
 | Feature        | Detailes     | 
 | ------------- |:-------------:| 
-
+| An error occured when attempting to deploy the site to heroku with ststic files and aws |
 
 
 # Technologies Used
@@ -199,6 +215,7 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 * Django
 * Favicon
 * Json
+* AWS
 
 
 # View
@@ -208,56 +225,63 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 ## Testing
 
 
-### New site user's testing:
+### New site user's goals:
 
 1. As a new visitor to the website I want to navigate the site with ease and no confusion.
+   * A navbar with links clearly labeled and working is present throughout the website and is shown in a clearer way in the phone size in bothe the academy and shop.
 
 2. As a new site user, I want to be able to browse and search for products
+   * A button is present on the shop home page wgere a user can click to view products, they can also click all products or products in the nav which will open a products page showing all products on the website, A user can also use the search bar to serach for any products on the website. 
 
 3. As a new site user, I want to be able to view the details of individual products
+   * In the products page you can click on any product this will dring you to that products details page where you can pick your size and add the product to your bag.
 
 4. As a new site user, I want to be able to understand the intent of the page
+   * there is a toasts system accross the full app where when a task is completed or underway the user is shown an error allert or info message which lets them know the intent of the page and what functions they are doing.
 
-5. As a new site user, I want to understand easily how to navigate the page and access the facilities provided
+5. As a new site user, I want to be able to make a purchase without needing to create a profile
+   * A user can add a product to thier bag and then checkout , fill in thier details and purchase a product without having to create an account with fai.
 
-6. As a new site user, I want to be able to make a purchase without needing to create a profile
+6. As a new site user, I want to be able to easily create an academy profile
+   * There is an academy button in the shop page where a user can either sign in or register for the academy, this will bring the user to a register page in the academy part of the website where they can register with FAI.
 
-7. As a new site user, I want to be able to easily create a profile
+7. As a new site user, I want to be able to view training sessions and have the option to attend or unattend.
+   * When a user has successfully created an account and signed in they can view all the training sessions and view them. The user can also click the attend button to attend the sesssion or click the unattend button to unattend the session.
 
-8. As a new site user, I want to be able to easily create an academy profile
+8. As a new site user, I want to be able to view trials and see if i have been selected for a trial or not.
+   * A user has to be selected by an admin to have access to a trial, If so a user can then view that trial and see when it is.
 
-9. As a new site user, I want to be able to easily create an academy yearly subscription
+9. As a new site user, I want to be able to sort products on a page
+   * A user can click to sort products on the products page in many different orders 
 
-10. As a new site user, I want to be able to view my profile and my details about training , subscriptions and information.
+10. As a new site user, I want to be able to sort by specific categories
+   * A user can click to sort products on the products page by category
 
-11. As a new site user, I want to be able to view training sessions and have the option to go or not.
+11. As a new site user, I want to be able to amend the items in my bag including quantities and removing them entirely
+   * A user can remove a product from thier bag and add more quantity or less quantity if needed.
 
-12. As a new site user, I want to be able to sort products on a page
-
-13. As a new site user, I want to be able to sort by specific categories
-
-14. As a new site user, I want to be able to amend the items in my bag including quantities and removing them entirely
-
-
-### player/user site user's testing:
+ 
+### player site user's goals:
 
 1. As a returning site user, I want to be able to log in and out.
 
 2. As a returning site user, I want to be able to recover a forgotten password.
 
-3. As a returning site user, I want to be able to have a personalised profile.
+3. As a returning site user, I want to be able to view my trials. 
 
-4. As a returning site user, I want to be able to view my past orders.
+4. As a returning site user, I want to be able to view my training.
 
-5. As a returning site user, I want to be able to view my training.
-
-### admin testing:
+### Admin user's goals
 
 1. As a site owner, I want to be able to create, edit and delete products.
 
 2. As a site owner, I want to be able to create training sessions and see who is attending.
-
+ 
 3. As a site owner, I want to be able to create delete and edit training sessions.
+
+4. As a site owner, I want to be able to create delete and edit trials.
+ 
+5. As a site owner, I want to be able to create trials and pick which players will attend.
 
 ## Performance testing:
 
@@ -313,7 +337,7 @@ To deploy the app to Heroku from its GitHub repository, the following steps were
 9. Enter the following keys and values, which must match those in the env.py file created earlier:
 
 | Key        | Value           | 
-| ------------- |:-------------:| 
+| ------------- |-------------| 
 | IP   | 0.0.0.0 | 
 | PORT     | 5000 | 
 | SECRET_KEY     | app secret key  | 
