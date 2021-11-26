@@ -8,11 +8,7 @@
 
 
 {% block page_header %}
-<div class="container header-container">
-  <div class="row">
-    <div class="col"></div>
-  </div>
-</div>
+
 {% endblock %}
 
 {% block content %}
@@ -45,6 +41,14 @@
 
   <!-- /.callout -->
 
+</div>
+<div class="container-fluid greytone">
+  <div class="row">
+    <div class="col mx-auto text-center">
+      <h3 class="pt-5">Description</h3>
+      <p class="pt-3 pb-5">{{ session.description }}</p>
+    </div>
+  </div>
 </div>
 <div class="container">
   <div class="row">

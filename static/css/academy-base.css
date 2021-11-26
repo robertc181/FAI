@@ -36,6 +36,19 @@ p {
     border:solid 2px white
 }
 
+.button2 {
+    letter-spacing: 2px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border:solid 2px rgb(0, 0, 0)
+}
+
+.button2:hover {
+    background-color: transparent;
+    letter-spacing: 2px;
+}
+
+
 button a{
     color: black;
 }

@@ -15,8 +15,8 @@
     <div class="row">
         <div class="col-12 col-md-6">
             <hr>
-            <h2 class="logo-font mb-4">session Management</h2>
-            <h5>Add a session</h5>
+            <h2 class="logo-font mb-4">Training Session Management</h2>
+            <h5>Add a Session</h5>
             <hr>
         </div>
     </div>
@@ -27,8 +27,9 @@
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div class="text-right">
+                    <p><bold>Grey = Attending</bold></p>
                     <a class="btn btn-outline-black rounded-0" href="{% url 'training'%}">Cancel</a>
-                    <button class="btn btn-black rounded-0" type="submit">Add session</button>
+                    <button class="button button2" type="submit">Add Training Session</button>
                 </div>
             </form>
         </div>

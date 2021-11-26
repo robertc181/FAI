@@ -61,8 +61,10 @@
                             <div class="viewlink">
                                 <!-- If user has been selected show -->
                                 {% if trial.player_selected %}
-                                <a href="{% url 'trial_detail' trial.id %}">See event</a>
-
+                                <div class="time">
+                                    <a href="{% url 'trial_detail' trial.id %}">See event</a>
+                                </div>
+                                
                                 {% else %}
                                 <!-- If user has not been selected show -->
                                 <div class="time">

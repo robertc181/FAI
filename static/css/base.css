@@ -40,6 +40,11 @@ ul {
     z-index: 1;
 }
 
+.whitespace{
+    padding-top: 100px;
+    padding-bottom: 400px;
+}
+
 
 /* ---------------------------------------text styles */
 
@@ -64,7 +69,7 @@ nav{
 }
 
 .borderbtm{
-    border-bottom: solid 1px white;
+    border-bottom: solid 1px #a5a5a5;
 }
 
 .topnav a:link{ color:#ffffff; } 
@@ -137,6 +142,13 @@ nav{
 
 /* ---------------------------------------buttons */
 
+.btt-link,
+.update-link,
+.remove-item,
+link {
+    cursor: pointer;
+}
+
 .button {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -179,7 +191,29 @@ nav{
     margin:10px
 }
 
+.button2 {
+    letter-spacing: 2px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border:solid 2px rgb(0, 0, 0)
+}
 
+.button2:hover {
+    background-color: transparent;
+    letter-spacing: 2px;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link{
+    padding-top: 12px;
+}
 
 
 
@@ -209,7 +243,7 @@ nav{
 
 
 .sidenav{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     height: 100%;
@@ -329,7 +363,7 @@ nav{
     }
 
     .sidenav{
-        position: absolute;
+        position: fixed;
         left: 25%;
     
     }
@@ -346,7 +380,7 @@ nav{
     }
 
     .sidenav{
-        position: absolute;
+        position: fixed;
         left: 60%;
     
 
@@ -392,7 +426,7 @@ nav{
     }
 
     .sidenav{
-        position: absolute;
+        position: fixed;
         left: 60%;
     
 
