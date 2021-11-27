@@ -28,8 +28,6 @@ you can find the live site HERE
 
 # UX
 
-## App Goals
-
 ## Strategy
 
 ### New site user's goals:
@@ -193,7 +191,7 @@ Please click the below link to view the wireframe
 | Feature        | Detailes     | 
 | ------------- |:-------------:| 
 | An error occured when attempting to deploy the site to heroku with Collect Static files | I had to set PutObject and DeleteObject in my AWS S3 bucket. |
-| When a purchase is made a user is shown a confirmation toast which says that hey will recive a confirmation email | This email has to be manually sent by the stripe profile admin this is an example of the email sent, [email example sent to my email]()  |
+| When a purchase is made a user is shown a confirmation toast which says that they will recive a confirmation email. This email has to be manually sent by the stripe profile admin this is an example of the email sent | ![thumbnail_Image](https://user-images.githubusercontent.com/72562765/143721866-dc2b454f-110a-4bbc-b443-1cabbd205bcc.jpg) |
 
 
 # Technologies Used
@@ -218,7 +216,7 @@ Please click the below link to view the wireframe
 
 # View
 
-* It is reccomended to view this application at a resolution ??
+* It is reccomended to view this application at a resolution 1920 x 1080, However it is fully responsive
 
 ## Testing
 
@@ -326,13 +324,7 @@ Please click the below link to view the wireframe
 10. Tested the stripe process using 4242 4242 4242 4242 which should be successful
       * Results: Order completed successfully and the confirmation page appears
       
-11. Tested the stripe process using 4000 0027 6000 3184 which will request authorisation - completed authentication
-      * Results: Authorisation screen appears then the order completed successfully and the confirmation page appears
-      
-12. Tested the stripe process using 4000 0027 6000 3184 which will request authorisation - selected declined
-      * Results: The payment fails and the user is returned to the checkout page. The appropriate error message appears
-      
-13. Tested the profile page and that the orders placed above show correctly
+12. Tested the profile page and that the orders placed above show correctly
       * Results: The two successful orders made during testing appeared on the right hand side of the screen
 
 
@@ -395,7 +387,7 @@ To deploy the app to Heroku from its GitHub repository, the following steps were
 | image       | Used For |
 | ------------- |-------------|
 | ![image (5)](https://user-images.githubusercontent.com/72562765/143719105-c44f2509-0872-43b3-a111-61dedc2669bf.png) | background image for trials and training |
-|  ![image (1)](https://user-images.githubusercontent.com/72562765/143719129-4cd007fe-45ef-4157-aff8-143132ba8317.png)| academy home page header   |
+| ![image (1)](https://user-images.githubusercontent.com/72562765/143719129-4cd007fe-45ef-4157-aff8-143132ba8317.png)| academy home page header   |
 | ![image (2)](https://user-images.githubusercontent.com/72562765/143719161-83dba724-63de-47b0-b9d2-e403e2f3c4c6.png) | Training session and trial background image |
 | ![uniforia](https://user-images.githubusercontent.com/72562765/143719195-69ded3fa-3ef8-4b87-95b2-f816f990d21f.jpeg) | shopfront page header |
 
