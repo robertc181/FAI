@@ -20,7 +20,6 @@
 .callout {
     background: url('/media/image (5).png');
     background-size: cover;
-    display: left;
     font-family: 'M PLUS 1p', sans-serif;
     z-index: 2;
     padding-top: 80px;

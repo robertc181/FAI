@@ -43,7 +43,8 @@ def add_trial(request):
             messages.success(request, 'Successfully added a trial!')
             return redirect(reverse('trial_detail', args=[trial.id]))
         else:
-            messages.error(request, 'Failed to add trial. Please check the details and try again')
+            messages.error
+            (request, 'Failed to add trial. Please check the details and try again')
     else: 
         form = TrialForm()
     template = 'trials/add_trial.html'
@@ -78,7 +79,8 @@ def edit_trial(request, trial_id):
             messages.success(request, 'Successfully updated the trial!')
             return redirect(reverse('trial_detail', args=[trial.id]))
         else:
-            messages.error(request, 'Failed to update the trial. Please check the details and try again')
+            messages.error(
+                request, 'Failed to update the trial. Please check the details and try again')
     else:
         form = TrialForm(instance=trial)
         messages.info(request, 'You are editing this trial')

@@ -27,7 +27,7 @@
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div class="text-right">
-                    <p><bold>Please use Ctrl click to select more players</bold></p>
+                    <p>Please use Ctrl click to select more players</p>
                     <a class="btn btn-outline-black rounded-0" href="{% url 'trials'%}">Cancel</a>
                     <button class="button button2" type="submit">Update Trial</button>
                 </div>
