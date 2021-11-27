@@ -2,7 +2,7 @@
 
 FAI is an online ecommerce shop that allows users to purchase football gear and accesories and sign up for the FAI academy where the user will have access to all the training sessions and attend or unattend training and hopefully get selected for a trial in the trials sections of the site. A player can alse speak with all the other players which are attending and unnatending a training session in the comments section.
 
-you can find the live site HERE
+you can find the live site [Here](https://football-academy-ireland.herokuapp.com/) 
 
 # Contents
 
