@@ -1,6 +1,6 @@
 # FAI Football Academy Ireland
 
-FAI is an online ecommerce shop that allows users to purchase football gear and accesories and sign up for a yearly payed subscription to the academy where the user will have access to all the training sessions and opt in to going to training and see other academy players profiles.
+FAI is an online ecommerce shop that allows users to purchase football gear and accesories and sign up for the FAI academy where the user will have access to all the training sessions and attend or unattend training and hopefully get selected for a trial in the trials sections of the site. A player can alse speak with all the other players which are attending and unnatending a training session in the comments section.
 
 you can find the live site HERE
 
@@ -26,10 +26,6 @@ you can find the live site HERE
    * Content
    * Acknowledgements
 
-# Summary
-
-FAI is an online ecommerce shop that allows users to purchase football gear and accesories and sign up for a yearly payed subscription to the academy where the user will have access to all the training sessions and opt in to going to training and see other academy players profiles.
-
 # UX
 
 ## App Goals
@@ -38,52 +34,52 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 
 ### New site user's goals:
 
-1. As a new visitor to the website I want to navigate the site with ease and no confusion.
+* As a new visitor to the website I want to navigate the site with ease and no confusion.
 
-2. As a new site user, I want to be able to browse and search for products
+* As a new site user, I want to be able to browse and search for products
 
-3. As a new site user, I want to be able to view the details of individual products
+* As a new site user, I want to be able to view the details of individual products
 
-4. As a new site user, I want to be able to understand the intent of the page
+* As a new site user, I want to be able to understand the intent of the page
 
-5. As a new site user, I want to understand easily how to navigate the page and access the facilities provided
+* As a new site user, I want to understand easily how to navigate the page and access the facilities provided
 
-6. As a new site user, I want to be able to make a purchase without needing to create a profile
+* As a new site user, I want to be able to make a purchase without needing to create a profile
 
-7. As a new site user, I want to be able to easily create an academy profile
+* As a new site user, I want to be able to easily create an academy profile
 
-8. As a new site user, I want to be able to view training sessions and have the option to attend or unattend.
+* As a new site user, I want to be able to view training sessions and have the option to attend or unattend.
 
-9. As a new site user, I want to be able to view trials and see if i have been selected for a trial or not.
+* As a new site user, I want to be able to view trials and see if i have been selected for a trial or not.
 
-10. As a new site user, I want to be able to sort products on a page
+* As a new site user, I want to be able to sort products on a page
 
-11. As a new site user, I want to be able to sort by specific categories
+* As a new site user, I want to be able to sort by specific categories
 
-12. As a new site user, I want to be able to amend the items in my bag including quantities and removing them entirely
+* As a new site user, I want to be able to amend the items in my bag including quantities and removing them entirely
 
  
 ### player site user's goals:
 
-1. As a returning site user, I want to be able to log in and out.
+* As a returning site user, I want to be able to log in and out.
 
-2. As a returning site user, I want to be able to recover a forgotten password.
+* As a returning site user, I want to be able to recover a forgotten password.
 
-3. As a returning site user, I want to be able to view my trials. 
+* As a returning site user, I want to be able to view my trials. 
 
-4. As a returning site user, I want to be able to view my training.
+* As a returning site user, I want to be able to view my training.
 
 ### Admin user's goals
 
-1. As a site owner, I want to be able to create, edit and delete products.
+* As a site owner, I want to be able to create, edit and delete products.
 
-2. As a site owner, I want to be able to create training sessions and see who is attending.
+* As a site owner, I want to be able to create training sessions and see who is attending.
  
-3. As a site owner, I want to be able to create delete and edit training sessions.
+* As a site owner, I want to be able to create delete and edit training sessions.
 
-4. As a site owner, I want to be able to create delete and edit trials.
+* As a site owner, I want to be able to create delete and edit trials.
  
-5. As a site owner, I want to be able to create trials and pick which players will attend.
+* As a site owner, I want to be able to create trials and pick which players will attend.
 
 ## Scope
 
@@ -106,6 +102,7 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 ### Foe usability 
 
 * For links to be clear and for the page to be constructed in a way which is instructive enabling the user to instinctively navigate the page
+* A toasts system which allows users to be notifued as they construct and lay out tasks accross the site with a simple alert at the top right of the page.
 
 ## Structure
 
@@ -128,7 +125,7 @@ FAI is an online ecommerce shop that allows users to purchase football gear and 
 
 ### wireframe
 Please click the below link to view the wireframe
-* - [Wireframes]()
+* - [Wireframes](https://github.com/robertc181/FAI/tree/main/wireframes)
 
 ## Surface
 
@@ -185,7 +182,7 @@ Please click the below link to view the wireframe
 
 ## Features left to implement
 
-| Feature        | Detailes           | 
+| syntax        | description           | 
 | ------------- |:------------:| 
 | create profile|  A player could sign in then view a profile which they could edit |
 |view my training| A player could view all of the training sessions he has chosen to go to in a profile |
@@ -195,7 +192,8 @@ Please click the below link to view the wireframe
 
 | Feature        | Detailes     | 
 | ------------- |:-------------:| 
-| An error occured when attempting to deploy the site to heroku with Collect Static files | I had to set PutObject and DeleteObject in my AWS S3 bucket.
+| An error occured when attempting to deploy the site to heroku with Collect Static files | I had to set PutObject and DeleteObject in my AWS S3 bucket. |
+| When a purchase is made a user is shown a confirmation toast which says that hey will recive a confirmation email | This email has to be manually sent by the stripe profile admin this is an example of the email sent, [email example sent to my email]()  |
 
 
 # Technologies Used
@@ -264,41 +262,79 @@ Please click the below link to view the wireframe
 ### player site user's goals:
 
 1. As a returning site user, I want to be able to log in and out.
+    * A user can log in and out from the academy part of the site by clicking the profile button in the nav and chooseing weather to log out or log in.
 
 2. As a returning site user, I want to be able to recover a forgotten password.
+   * If a user has forgotten thier password they can click the forgot password button with will alert the user to enter in thier email address and a change password email will be sent to thier email where they can clik on the link to create a new password and create one.
 
 3. As a returning site user, I want to be able to view my trials. 
+   * As a user you can sign in click on trials and see all the trials that you have been selcetd for and not selected for and click into the trials you have been selected for.
 
 4. As a returning site user, I want to be able to view my training.
-
+   * As a user you can sign in click on training and see all the training sessions that are on and click to view the session and click to attend or unattend the session you can also see any comments that have been ceated or create your own comment.
 ### Admin user's goals
 
 1. As a site owner, I want to be able to create, edit and delete products.
+   * A site owner can click product management in the shopfront nav and then click add product where he is brought to the add product page where he can add a new product , when this is finished an dthe product has been created the site owner is brought to the products page where he can view his new product, the admin can go into the product and click to either edit the product or delete the product.
 
 2. As a site owner, I want to be able to create training sessions and see who is attending.
+   * A site owner can click training management in the academy nav where he is brought to the add training session page where he can add a new training session, The admin can also view which players are attending the training session.
  
 3. As a site owner, I want to be able to create delete and edit training sessions.
+   * A site owner can go into the product and click to either edit the product or delete the product.
 
 4. As a site owner, I want to be able to create delete and edit trials.
+   * A site owner can click trial management in the academy nav where he is brought to the add trial page where he can add a new trial , a site owner can also delete and edit a trial from the trials page.
  
 5. As a site owner, I want to be able to create trials and pick which players will attend.
+   *  The admin can also select which player will be attending the trail in the edit trail page or the add trial page, 
 
 ## Performance testing:
 
-* 
+1. Tested website responsiveness using  Google Dev Tools by inspecting the page and setting the size to responsive mode
+      - Results: The website is responsive to all device sizes without any unnecessary x-scroll
+      
+2. Tested the image size to ensure no image is to large and impacting the website loading times. I used the Google Dev Tools - Network
+      * Results: The site loading time is appropriate. The total website loading time is 1.1s is acceptable
+      
+3. Tested the images on the all products page using Google Dev Tools - Lighthouse
+      * Results: It was recommended that the images used were of a smaller size to improve download speed and cause less data consumption.
+      * All HTML and CSS were tested using https://jigsaw.w3.org/css-validator/validator
+      * All but the templates resulted in errors that the Lang Doctype and Title were missing. This was to be expected as the details were being extended from the base template to       did not need to be added
+      * All HTML pages resulted in errors where the Jinja template language was used creating a parse error
+      * None of these are actual errors within the code
+      * Some CSS errors were observed. However, the items highlighted were added intentionally to the CSS files and did create the desired affect
+      
+4. Tested the website on the Google Chrome browser Version 89.0.4389.90 (Official Build) (64-bit)
+      * Results: The website was responsive and the elements performed in the way they were intended to
+      
+5. Tested the website on the Microsoft Edge browser Version 89.0.774.63 (Official build) (64-bit)
+      * Results: The website was responsive and the elements performed in the way they were intended to
+      
+6. Tested the website on the Firefox browser Version 82.0.3 (64-bit)
+      * Results: The website was responsive and the elements performed in the way they were intended to
+      
+7. Tested adding items to the bag
+      * Results: Successfully able to add an item to the bag
+      
+8. Tested increasing the quantity of items in the bag
+      * Results: Successfully able to increase the quantity of an item in the bag
+      
+9. Tested removing items from the bag
+      * Results:Successfully removed an item from the bag
+      
+10. Tested the stripe process using 4242 4242 4242 4242 which should be successful
+      * Results: Order completed successfully and the confirmation page appears
+      
+11. Tested the stripe process using 4000 0027 6000 3184 which will request authorisation - completed authentication
+      * Results: Authorisation screen appears then the order completed successfully and the confirmation page appears
+      
+12. Tested the stripe process using 4000 0027 6000 3184 which will request authorisation - selected declined
+      * Results: The payment fails and the user is returned to the checkout page. The appropriate error message appears
+      
+13. Tested the profile page and that the orders placed above show correctly
+      * Results: The two successful orders made during testing appeared on the right hand side of the screen
 
-# Git hub pages
-
-1. Create a new repository or access an existing repository
-2. Click the green Gitpod button to launch the project in Gitpod
-3. Create an index.html file
-4. Add the file to the staging area using the git add Functional
-5. Commit the file using the git commit function, adding an appropriate commentary
-6. Push the file to GitHub using the git commit and git push functions
-7. Refresh your GitHub repository and click the 'Settings' tab
-8. Scroll to the GitHub Pages section and select a publishing source
-9. Click 'Save'
-10. Click the URL created within the Settings - GitHub Pages section
 
 ### To clone the repository for local deployment:
 
@@ -306,7 +342,7 @@ Please click the below link to view the wireframe
 2. Click the download icon under the relevant section to clone with either HTTPS, SSH or 3GitHub CLI
 4. In Git Bash, change the current directory to the location you want the directory to be stored
 5. Type git clone and then paste the URL you copied in step 2
-6. An example for HTTPS: git clone ******************************************** 
+6. An example for HTTPS: git clone ************
 7. Press enter - that's it, your clone has been completed!
 
 ### Fork repo
@@ -319,36 +355,51 @@ Please click the below link to view the wireframe
 
 ## Heroku
 
+### How to deploy to Heroku
+
 To deploy the app to Heroku from its GitHub repository, the following steps were taken:
 
 1. From the GitPod terminal, create requirements.txt and Procfile using these commands:
-
-     ```pip3 freeze --local > requirements.txt
+      ```
+     pip3 freeze --local > requirements.txt
      echo web: python app.py > Procfile
      ```
-
-2. Push these files to GitHub
-3. Log In to Heroku
-4. 4.Select Create new app from the dropdown in the Heroku dashboard
-5. Choose a unique name ('player_link') for the app and the location nearest to you
-6. Go to the Deploy tab and under Deployment method choose GitHub
-7. In Connect to GitHub enter your GitHub repository details and once found, click Connect
-8. Go to the Settings tab and under Config Vars choose Reveal Config Vars
-9. Enter the following keys and values, which must match those in the env.py file created earlier:
+3. Push these files to GitHub
+4. Log In to Heroku
+5. Select Create new app from the dropdown in the Heroku dashboard
+6. Choose a unique name ('recipe-nation') for the app and the location nearest to you
+7. Go to the Deploy tab and under Deployment method choose GitHub
+8. In Connect to GitHub enter your GitHub repository details and once found, click Connect
+9. Go to the Settings tab and under Config Vars choose Reveal Config Vars
+10. Enter the following keys and values, which must match those in the settings.py file:
 
 | Key        | Value           | 
 | ------------- |-------------| 
-| IP   | 0.0.0.0 | 
-| PORT     | 5000 | 
-| SECRET_KEY     | app secret key  | 
-| MONGO_URI     | mongodb+srv://root:dsxigyzwsao0sozm@myfirstcluster.n0en1.mongodb.net/player_link?retryWrites=true&w=majority | 
-| MONGO_DBNAME     | player_link | 
+| AWS_ACCESS_KEY_ID   | AWS_ACCESS_KEY_ID | 
+| AWS_SECRET_ACCESS_KEY     | AWS_SECRET_ACCESS_KEY | 
+| DATABASE_URL     | DATABASE_URL  | 
+| EMAIL_HOST_PASS     | EMAIL_HOST_PASS | 
+| EMAIL_HOST_USER     | EMAIL_HOST_USER | 
+| SECRET_KEY     | SECRET_KEY | 
+| STRIPE_PUBLIC_KEY     | STRIPE_PUBLIC_KEY | 
+| STRIPE_SECRET_KEY     | STRIPE_SECRET_KEY | 
+| STRIPE_WH_SECRET     | STRIPE_WH_KEY | 
+| USE_AWS     | True | 
 
 10. Go back to the Deploy tab and under Automatic deploys choose Enable Automatic Deploys
 11. Under Manual deploy, select master and click Deploy Branch
 12. Once the app has finished building, click Open app from the header row of the dashboard
 
 ## Credits
+
+| image       | Used For |
+| ------------- |-------------|
+| ![image (5)](https://user-images.githubusercontent.com/72562765/143719105-c44f2509-0872-43b3-a111-61dedc2669bf.png) | background image for trials and training |
+|  ![image (1)](https://user-images.githubusercontent.com/72562765/143719129-4cd007fe-45ef-4157-aff8-143132ba8317.png)| academy home page header   |
+| ![image (2)](https://user-images.githubusercontent.com/72562765/143719161-83dba724-63de-47b0-b9d2-e403e2f3c4c6.png) | Training session and trial background image |
+| ![uniforia](https://user-images.githubusercontent.com/72562765/143719195-69ded3fa-3ef8-4b87-95b2-f816f990d21f.jpeg) | shopfront page header |
+
+
 
 ### Acknowledgements
 
