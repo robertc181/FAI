@@ -5,6 +5,7 @@ from .models import Session, Comment
 # Register your models here.
 admin.site.register(Session)
 
+
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('name', 'body', 'post', 'created_on', 'active')
     list_filter = ('active', 'created_on')

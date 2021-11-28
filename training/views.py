@@ -5,6 +5,7 @@ from django.contrib import messages
 
 # Create your views here.
 
+
 def training(request):
     """ A view to return the index page """
 
@@ -57,7 +58,8 @@ def session_attend(request, session_id):
         'comment_form': comment_form,
         'comments': comments
     }
-    messages.success(request, f'You are attending the {session.name} on {session.day}')
+    messages.success(
+        request, f'You are attending the {session.name} on {session.day}')
     return render(request, 'training/session_detail.html', context)
 
 
@@ -71,12 +73,13 @@ def session_unattend(request, session_id):
     comment_form = CommentForm()
     session.attendees_list = session.attendees.all()
     context = {
-    
+
         'session': session,
         'comment_form': comment_form,
         'comments': comments
     }
-    messages.info(request, f'You are not attending the {session.name} on {session.day}')
+    messages.info(
+        request, f'You are not attending the {session.name} on {session.day}')
     return render(request, 'training/session_detail.html', context)
 
 
@@ -117,8 +120,9 @@ def add_session(request):
             messages.success(request, 'Successfully added a session!')
             return redirect(reverse('session_detail', args=[session.id]))
         else:
-            messages.error(request, 'Failed to add session. Please check the details and try again')
-    else: 
+            messages.error(
+                request, 'Failed to add session. Please check the details and try again')
+    else:
         form = SessionForm()
     template = 'training/add_session.html'
     context = {
@@ -126,6 +130,7 @@ def add_session(request):
     }
 
     return render(request, template, context)
+
 
 def delete_session(request, session_id):
     if not request.user.is_superuser:
@@ -138,7 +143,7 @@ def delete_session(request, session_id):
     return redirect(reverse('training'))
 
 
-def edit_session (request, session_id):
+def edit_session(request, session_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store admin can do that')
         return redirect(reverse('home'))
@@ -151,7 +156,8 @@ def edit_session (request, session_id):
             messages.success(request, 'Successfully updated the session!')
             return redirect(reverse('session_detail', args=[session.id]))
         else:
-            messages.error(request, 'Failed to update the session. Please check the details and try again')
+            messages.error(
+                request, 'Failed to update the session. Please check the details and try again')
     else:
         form = SessionForm(instance=session)
         messages.info(request, 'You are editing this session')
@@ -164,5 +170,3 @@ def edit_session (request, session_id):
 
     return render(request, template, context)
 
-
-    # 
