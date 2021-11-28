@@ -146,10 +146,6 @@ Please click the below link to view the wireframe
 
 # Features
 
-## Database model / app structure
-
-- [Database model]()
-
 ## Existing Features
 
 | Feature        | Detailes           | 
@@ -326,6 +322,9 @@ Please click the below link to view the wireframe
       
 12. Tested the profile page and that the orders placed above show correctly
       * Results: The two successful orders made during testing appeared on the right hand side of the screen
+
+13. Tested the deplyed version against the local
+      * Results: I found that the local and deployed were more or less the same with slight diferences when it came to the terminal with the settings created in the settings.py folder. This means to get images and css loading you would have to ixport DEVELOPMENT and set a secret_key also you would have to export and stripe keys so the checkout would be functional.
 
 
 ### To clone the repository for local deployment:
